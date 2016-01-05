@@ -22,5 +22,30 @@ PrototypeGSI
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="P:PrototypeGSI.My.Resources.Resources.Calzone">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:PrototypeGSI.My.Resources.Resources.Italienne">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:PrototypeGSI.My.Resources.Resources.Kebab">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:PrototypeGSI.My.Resources.Resources.Quatre_fromages">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:PrototypeGSI.My.Resources.Resources.Reine">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 </members>
 </doc>

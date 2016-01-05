@@ -72,7 +72,14 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Database.vb" />
+    <Compile Include="classes\Database.vb" />
+    <Compile Include="classes\Pizza.vb" />
+    <Compile Include="controls\Pizza.Designer.vb">
+      <DependentUpon>Pizza.vb</DependentUpon>
+    </Compile>
+    <Compile Include="controls\Pizza.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -95,20 +102,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Filter.Designer.vb">
+    <Compile Include="controls\Filter.Designer.vb">
       <DependentUpon>Filter.vb</DependentUpon>
     </Compile>
-    <Compile Include="Filter.vb">
+    <Compile Include="controls\Filter.vb">
       <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControl1.Designer.vb">
-      <DependentUpon>UserControl1.vb</DependentUpon>
-    </Compile>
-    <Compile Include="UserControl1.vb">
-      <SubType>Component</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="controls\Pizza.resx">
+      <DependentUpon>Pizza.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
@@ -118,11 +122,8 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Filter.resx">
+    <EmbeddedResource Include="controls\Filter.resx">
       <DependentUpon>Filter.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControl1.resx">
-      <DependentUpon>UserControl1.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -136,6 +137,13 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="images\Calzone.jpg" />
+    <Content Include="images\Italienne.jpg" />
+    <Content Include="images\Kebab.jpg" />
+    <Content Include="images\Quatre fromages.jpg" />
+    <Content Include="images\Reine.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

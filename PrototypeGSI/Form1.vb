@@ -1,7 +1,6 @@
 ﻿Public Class Form1
 
     Shared filters As New Dictionary(Of String, Filter)
-    Dim FilterPanel As New TableLayoutPanel
 
     Private Sub treeView_DrawNode(sender As Object, e As DrawTreeNodeEventArgs) Handles TreeView1.DrawNode
         e.DrawDefault = True
@@ -35,6 +34,7 @@
             End If
     End Sub
 
+    ' We want a double click to count as to clicks
     Private Sub TreeView1_NodeMouseDoubleClick(sender As Object, e As TreeNodeMouseClickEventArgs) Handles TreeView1.NodeMouseDoubleClick
         TreeView1_NodeMouseClick(sender, e)
     End Sub
@@ -50,14 +50,18 @@
 
     End Sub
 
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        FilterPanel.Parent = Panel4
-        FilterPanel.Location = New Point(20, 20)
-        FilterPanel.Width = 500
-        FilterPanel.Height = 60
-        FilterPanel.AutoScroll = True
-        FilterPanel.ColumnCount = 3
-        FilterPanel.RowCount = 2
-        FilterPanel.MinimumSize = New Size(500, 60)
+    Private Sub ShowPizzas()
+        Debug.Print("Pizzas?")
+        For Each Pizza As Pizza In Database.pizzas.Values
+            PizzaLayoutPanel.Controls.Add(New PizzaPanel(Pizza))
+            Debug.Print(Pizza.Name)
+        Next
+
+    End Sub
+
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
+        Database.Init()
+        Debug.Print("Pizzas?")
+        ShowPizzas()
     End Sub
 End Class

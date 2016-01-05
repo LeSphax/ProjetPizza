@@ -10,4 +10,4 @@ c:\users\sebas\documents\visual studio 2015\Projects\PrototypeGSI\PrototypeGSI\o
 c:\users\sebas\documents\visual studio 2015\Projects\PrototypeGSI\PrototypeGSI\obj\Debug\PrototypeGSI.xml
 c:\users\sebas\documents\visual studio 2015\Projects\PrototypeGSI\PrototypeGSI\obj\Debug\PrototypeGSI.pdb
 c:\users\sebas\documents\visual studio 2015\Projects\PrototypeGSI\PrototypeGSI\obj\Debug\PrototypeGSI.Filter.resources
-c:\users\sebas\documents\visual studio 2015\Projects\PrototypeGSI\PrototypeGSI\obj\Debug\PrototypeGSI.UserControl1.resources
+C:\Users\Sebas\Documents\Visual Studio 2015\Projects\PrototypeGSI\PrototypeGSI\obj\Debug\PrototypeGSI.PizzaPanel.resources
