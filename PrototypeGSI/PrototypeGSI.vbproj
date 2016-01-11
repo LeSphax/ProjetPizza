@@ -11,8 +11,9 @@
     <AssemblyName>PrototypeGSI</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -74,6 +75,12 @@
   <ItemGroup>
     <Compile Include="classes\Database.vb" />
     <Compile Include="classes\Pizza.vb" />
+    <Compile Include="controls\CartElem.Designer.vb">
+      <DependentUpon>CartElem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="controls\CartElem.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="controls\Pizza.Designer.vb">
       <DependentUpon>Pizza.vb</DependentUpon>
     </Compile>
@@ -110,6 +117,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="controls\CartElem.resx">
+      <DependentUpon>CartElem.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="controls\Pizza.resx">
       <DependentUpon>Pizza.vb</DependentUpon>
     </EmbeddedResource>

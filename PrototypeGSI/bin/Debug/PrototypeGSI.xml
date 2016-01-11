@@ -6,45 +6,38 @@ PrototypeGSI
 </name>
 </assembly>
 <members>
-<member name="T:PrototypeGSI.My.Resources.Resources">
-<summary>
-  A strongly-typed resource class, for looking up localized strings, etc.
-</summary>
-</member>
 <member name="P:PrototypeGSI.My.Resources.Resources.ResourceManager">
-<summary>
-  Returns the cached ResourceManager instance used by this class.
+	<summary>
+  Retourne l'instance ResourceManager mise en cache utilisée par cette classe.
 </summary>
-</member>
-<member name="P:PrototypeGSI.My.Resources.Resources.Culture">
-<summary>
-  Overrides the current thread's CurrentUICulture property for all
-  resource lookups using this strongly typed resource class.
+</member><member name="P:PrototypeGSI.My.Resources.Resources.Culture">
+	<summary>
+  Remplace la propriété CurrentUICulture du thread actuel pour toutes
+  les recherches de ressources à l'aide de cette classe de ressource fortement typée.
 </summary>
-</member>
-<member name="P:PrototypeGSI.My.Resources.Resources.Calzone">
-<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+</member><member name="P:PrototypeGSI.My.Resources.Resources.Calzone">
+	<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:PrototypeGSI.My.Resources.Resources.Italienne">
-<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+</member><member name="P:PrototypeGSI.My.Resources.Resources.Italienne">
+	<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:PrototypeGSI.My.Resources.Resources.Kebab">
-<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+</member><member name="P:PrototypeGSI.My.Resources.Resources.Kebab">
+	<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:PrototypeGSI.My.Resources.Resources.Quatre_fromages">
-<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+</member><member name="P:PrototypeGSI.My.Resources.Resources.Quatre_fromages">
+	<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:PrototypeGSI.My.Resources.Resources.Reine">
-<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
+</member><member name="P:PrototypeGSI.My.Resources.Resources.Reine">
+	<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member><member name="T:PrototypeGSI.My.Resources.Resources">
+	<summary>
+  Une classe de ressource fortement typée destinée, entre autres, à la consultation des chaînes localisées.
 </summary>
 </member>
 </members>

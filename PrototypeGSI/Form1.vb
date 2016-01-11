@@ -1,7 +1,6 @@
 ﻿Public Class Form1
 
     Shared filters As New Dictionary(Of String, Filter)
-
     Private Sub treeView_DrawNode(sender As Object, e As DrawTreeNodeEventArgs) Handles TreeView1.DrawNode
         e.DrawDefault = True
     End Sub
@@ -29,9 +28,9 @@
                     FilterPanel.Controls.Add(filter)
                     filters.Add(e.Node.Text, filter)
                     e.Node.ForeColor = Color.Green
-                    End If
                 End If
             End If
+        End If
     End Sub
 
     ' We want a double click to count as to clicks
@@ -50,6 +49,17 @@
 
     End Sub
 
+    Public Sub AddToCartNewPizza(pizza As Pizza)
+        Dim elem As CartElem = New CartElem(pizza)
+        CartLayoutPanel.Controls.Add(elem)
+        sumLabel.Text += pizza.Price
+    End Sub
+
+    Public Sub AddToCart(pizza As Pizza)
+        sumLabel.Text += pizza.Price
+    End Sub
+
+
     Private Sub ShowPizzas()
         Debug.Print("Pizzas?")
         For Each Pizza As Pizza In Database.pizzas.Values
@@ -63,5 +73,19 @@
         Database.Init()
         Debug.Print("Pizzas?")
         ShowPizzas()
+
+    End Sub
+
+
+    Private Sub viderBtn_Click(sender As Object, e As EventArgs) Handles viderBtn.Click
+        CartLayoutPanel.Controls.Clear()
+        sumLabel.Text = 0.0
+
+    End Sub
+
+    Private Sub validerBtn_Click(sender As Object, e As EventArgs) Handles validerBtn.Click
+        CartLayoutPanel.Controls.Clear()
+        sumLabel.Text = 0.0
+
     End Sub
 End Class

@@ -11,3 +11,16 @@ c:\users\sebas\documents\visual studio 2015\Projects\PrototypeGSI\PrototypeGSI\o
 c:\users\sebas\documents\visual studio 2015\Projects\PrototypeGSI\PrototypeGSI\obj\Debug\PrototypeGSI.pdb
 c:\users\sebas\documents\visual studio 2015\Projects\PrototypeGSI\PrototypeGSI\obj\Debug\PrototypeGSI.Filter.resources
 C:\Users\Sebas\Documents\Visual Studio 2015\Projects\PrototypeGSI\PrototypeGSI\obj\Debug\PrototypeGSI.PizzaPanel.resources
+C:\Users\Céline\ProjetPizza\PrototypeGSI\bin\Debug\PrototypeGSI.exe.config
+C:\Users\Céline\ProjetPizza\PrototypeGSI\bin\Debug\PrototypeGSI.exe
+C:\Users\Céline\ProjetPizza\PrototypeGSI\bin\Debug\PrototypeGSI.pdb
+C:\Users\Céline\ProjetPizza\PrototypeGSI\bin\Debug\PrototypeGSI.xml
+C:\Users\Céline\ProjetPizza\PrototypeGSI\obj\Debug\PrototypeGSI.PizzaPanel.resources
+C:\Users\Céline\ProjetPizza\PrototypeGSI\obj\Debug\PrototypeGSI.Form1.resources
+C:\Users\Céline\ProjetPizza\PrototypeGSI\obj\Debug\PrototypeGSI.Resources.resources
+C:\Users\Céline\ProjetPizza\PrototypeGSI\obj\Debug\PrototypeGSI.Filter.resources
+C:\Users\Céline\ProjetPizza\PrototypeGSI\obj\Debug\PrototypeGSI.vbproj.GenerateResource.Cache
+C:\Users\Céline\ProjetPizza\PrototypeGSI\obj\Debug\PrototypeGSI.exe
+C:\Users\Céline\ProjetPizza\PrototypeGSI\obj\Debug\PrototypeGSI.xml
+C:\Users\Céline\ProjetPizza\PrototypeGSI\obj\Debug\PrototypeGSI.pdb
+C:\Users\Céline\ProjetPizza\PrototypeGSI\obj\Debug\PrototypeGSI.CartElem.resources
