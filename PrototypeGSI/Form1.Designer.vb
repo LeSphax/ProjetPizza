@@ -22,14 +22,14 @@ Partial Class Form1
     'Ne la modifiez pas à l'aide de l'éditeur de code.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim TreeNode17 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Les Meilleures")
-        Dim TreeNode18 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Végétariennes")
-        Dim TreeNode19 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Hallal")
-        Dim TreeNode20 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Type", New System.Windows.Forms.TreeNode() {TreeNode17, TreeNode18, TreeNode19})
-        Dim TreeNode21 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Tomate")
-        Dim TreeNode22 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Crème fraiche")
-        Dim TreeNode23 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Harissa")
-        Dim TreeNode24 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Sauce", New System.Windows.Forms.TreeNode() {TreeNode21, TreeNode22, TreeNode23})
+        Dim TreeNode25 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Les Meilleures")
+        Dim TreeNode26 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Végétariennes")
+        Dim TreeNode27 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Hallal")
+        Dim TreeNode28 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Type", New System.Windows.Forms.TreeNode() {TreeNode25, TreeNode26, TreeNode27})
+        Dim TreeNode29 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Tomate")
+        Dim TreeNode30 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Crème fraiche")
+        Dim TreeNode31 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Harissa")
+        Dim TreeNode32 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Sauce", New System.Windows.Forms.TreeNode() {TreeNode29, TreeNode30, TreeNode31})
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.TreeView1 = New System.Windows.Forms.TreeView()
@@ -41,6 +41,7 @@ Partial Class Form1
         Me.CommandeTitleLabel = New System.Windows.Forms.Label()
         Me.FilterPanel = New System.Windows.Forms.FlowLayoutPanel()
         Me.PizzaLayoutPanel = New System.Windows.Forms.FlowLayoutPanel()
+        Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.Panel5.SuspendLayout()
         Me.Panel4.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -73,23 +74,23 @@ Partial Class Form1
         Me.TreeView1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TreeView1.Location = New System.Drawing.Point(0, 40)
         Me.TreeView1.Name = "TreeView1"
-        TreeNode17.Name = "Type1"
-        TreeNode17.Text = "Les Meilleures"
-        TreeNode18.Name = "Type2"
-        TreeNode18.Text = "Végétariennes"
-        TreeNode19.Name = "Type3"
-        TreeNode19.Text = "Hallal"
-        TreeNode20.Name = "Type"
-        TreeNode20.Text = "Type"
-        TreeNode21.Name = "Sauce1"
-        TreeNode21.Text = "Tomate"
-        TreeNode22.Name = "Sauce2"
-        TreeNode22.Text = "Crème fraiche"
-        TreeNode23.Name = "Sauce3"
-        TreeNode23.Text = "Harissa"
-        TreeNode24.Name = "Sauce"
-        TreeNode24.Text = "Sauce"
-        Me.TreeView1.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode20, TreeNode24})
+        TreeNode25.Name = "Type1"
+        TreeNode25.Text = "Les Meilleures"
+        TreeNode26.Name = "Type2"
+        TreeNode26.Text = "Végétariennes"
+        TreeNode27.Name = "Type3"
+        TreeNode27.Text = "Hallal"
+        TreeNode28.Name = "Type"
+        TreeNode28.Text = "Type"
+        TreeNode29.Name = "Sauce1"
+        TreeNode29.Text = "Tomate"
+        TreeNode30.Name = "Sauce2"
+        TreeNode30.Text = "Crème fraiche"
+        TreeNode31.Name = "Sauce3"
+        TreeNode31.Text = "Harissa"
+        TreeNode32.Name = "Sauce"
+        TreeNode32.Text = "Sauce"
+        Me.TreeView1.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode28, TreeNode32})
         Me.TreeView1.Size = New System.Drawing.Size(200, 851)
         Me.TreeView1.TabIndex = 5
         '
@@ -97,6 +98,7 @@ Partial Class Form1
         '
         Me.Panel5.BackColor = System.Drawing.SystemColors.Control
         Me.Panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel5.Controls.Add(Me.FlowLayoutPanel1)
         Me.Panel5.Controls.Add(Me.CommandeTitleLabel)
         Me.Panel5.Dock = System.Windows.Forms.DockStyle.Right
         Me.Panel5.Location = New System.Drawing.Point(864, 100)
@@ -172,6 +174,13 @@ Partial Class Form1
         Me.PizzaLayoutPanel.Size = New System.Drawing.Size(864, 791)
         Me.PizzaLayoutPanel.TabIndex = 0
         '
+        'FlowLayoutPanel1
+        '
+        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(205, 70)
+        Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(200, 100)
+        Me.FlowLayoutPanel1.TabIndex = 1
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -201,4 +210,5 @@ Partial Class Form1
     Friend WithEvents CommandeTitleLabel As Label
     Friend WithEvents FilterPanel As FlowLayoutPanel
     Friend WithEvents PizzaLayoutPanel As FlowLayoutPanel
+    Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
 End Class
