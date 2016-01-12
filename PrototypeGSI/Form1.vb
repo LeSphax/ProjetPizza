@@ -33,10 +33,31 @@
         For Each Pizza As PizzaPanel In pizzas
             PizzaLayoutPanel.Controls.Add(Pizza)
         Next
+    End Sub
 
+    Public Sub AddToCartNewPizza(pizza As Pizza)
+        Dim elem As CartElem = New CartElem(pizza)
+        CartLayoutPanel.Controls.Add(elem)
+        sumLabel.Text += pizza.Price
+    End Sub
+
+    Public Sub AddToCart(pizza As Pizza)
+        sumLabel.Text += pizza.Price
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
         myFilters = New Filters(Me)
+    End Sub
+
+
+    Private Sub viderBtn_Click(sender As Object, e As EventArgs) Handles viderBtn.Click
+        CartLayoutPanel.Controls.Clear()
+        sumLabel.Text = 0.0
+
+    End Sub
+
+    Private Sub validerBtn_Click(sender As Object, e As EventArgs) Handles validerBtn.Click
+        CartLayoutPanel.Controls.Clear()
+        sumLabel.Text = 0.0
     End Sub
 End Class
