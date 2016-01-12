@@ -1,6 +1,6 @@
 ﻿Public Class Form1
 
-    Shared filters As New Dictionary(Of String, Filter)
+    Dim myFilters As Filters
 
     Private Sub treeView_DrawNode(sender As Object, e As DrawTreeNodeEventArgs) Handles TreeView1.DrawNode
         e.DrawDefault = True
@@ -13,25 +13,9 @@
     Private Sub TreeView1_NodeMouseClick(sender As Object, e As TreeNodeMouseClickEventArgs) Handles TreeView1.NodeMouseClick
         If (e.Node.Parent IsNot Nothing) Then
             If (e.Node.Parent.GetType() Is GetType(TreeNode)) Then
-                Dim filter As Filter
-                filter = Nothing
-                If (filters.TryGetValue(e.Node.Text, filter)) Then
-                    If (filter.Color = Color.Green) Then
-                        filter.Color = Color.Red
-
-                        e.Node.ForeColor = Color.Red
-
-                    ElseIf (filter.Color = Color.Red) Then
-                        RemoveFilter(e.Node.Text)
-                    End If
-                Else
-                    filter = New Filter(e.Node, Color.Green)
-                    FilterPanel.Controls.Add(filter)
-                    filters.Add(e.Node.Text, filter)
-                    e.Node.ForeColor = Color.Green
-                    End If
-                End If
+                myFilters.Clicked(e.Node)
             End If
+        End If
     End Sub
 
     ' We want a double click to count as to clicks
@@ -39,29 +23,20 @@
         TreeView1_NodeMouseClick(sender, e)
     End Sub
 
-    Public Shared Sub RemoveFilter(name As String)
-        Dim filter As Filter
-        filter = Nothing
-        If filters.TryGetValue(name, filter) Then
-            filter.Node.ForeColor = Color.Black
-            filter.Destroy()
-            filters.Remove(name)
-        End If
-
+    Public Sub AddFilter(newFilter As Filter)
+        FilterPanel.Controls.Add(newFilter)
     End Sub
 
-    Private Sub ShowPizzas()
-        Debug.Print("Pizzas?")
-        For Each Pizza As Pizza In Database.pizzas.Values
-            PizzaLayoutPanel.Controls.Add(New PizzaPanel(Pizza))
-            Debug.Print(Pizza.Name)
+    Public Sub ShowPizzas(pizzas As List(Of PizzaPanel))
+        PizzaLayoutPanel.Controls.Clear()
+
+        For Each Pizza As PizzaPanel In pizzas
+            PizzaLayoutPanel.Controls.Add(Pizza)
         Next
 
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
-        Database.Init()
-        Debug.Print("Pizzas?")
-        ShowPizzas()
+        myFilters = New Filters(Me)
     End Sub
 End Class
