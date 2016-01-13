@@ -63,4 +63,13 @@
     Public Sub Delete()
         _state = State.OUTCART
     End Sub
+
+    Public Function IngredientsToString() As String
+        Dim result As String = ""
+        For Each Ingredient As String In Ingredients
+            result += Ingredient + ", "
+        Next
+        result = result.Substring(0, result.Length - 2)
+        Return result
+    End Function
 End Class

@@ -40,7 +40,7 @@
     End Sub
 
 
-    Public Sub Clicked()
+    Public Sub TreeClicked()
         Select Case MyState
             Case State.Positive
                 SetNegative()
@@ -49,9 +49,32 @@
         End Select
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        SetDesactivated()
+    Public Sub FilterClicked()
+        Select Case MyState
+            Case State.Positive
+                SetNegative()
+            Case State.Negative
+                SetPositive()
+        End Select
     End Sub
+
+    Private Sub CrossClick(sender As Object, e As EventArgs) Handles Button1.Click
+        Select Case MyState
+            Case State.Positive
+                SetDesactivated()
+            Case State.Negative
+                SetDesactivated()
+        End Select
+    End Sub
+
+    Private Sub Filter_Click() Handles Me.Click, Label1.Click
+        MyFilters.FilterClicked(Me)
+    End Sub
+
+    Private Sub Filter_DoubleClick() Handles Me.DoubleClick, Label1.DoubleClick
+        Filter_Click()
+    End Sub
+
 
     Public Sub Destroy()
 

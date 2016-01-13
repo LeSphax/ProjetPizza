@@ -1,5 +1,5 @@
 ﻿Public Class Database
-    Public Shared pizzas As New Dictionary(Of Pizza, PizzaPanel)
+    Public Shared pizzas As New Dictionary(Of Pizza, PizzaGridView)
 
     Public Shared Sub Init()
         Dim MyPizza As New Pizza("Reine", My.Resources.Reine, 8,
@@ -25,7 +25,7 @@
     End Sub
 
     Private Shared Sub AddPizza(MyPizza As Pizza)
-        pizzas.Add(MyPizza, New PizzaPanel(MyPizza))
+        pizzas.Add(MyPizza, New PizzaGridView(MyPizza))
     End Sub
 
 End Class

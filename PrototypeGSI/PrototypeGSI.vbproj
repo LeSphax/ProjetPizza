@@ -82,10 +82,16 @@
     <Compile Include="controls\CartElem.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="controls\Pizza.Designer.vb">
-      <DependentUpon>Pizza.vb</DependentUpon>
+    <Compile Include="controls\PizzaGridView.Designer.vb">
+      <DependentUpon>PizzaGridView.vb</DependentUpon>
     </Compile>
-    <Compile Include="controls\Pizza.vb">
+    <Compile Include="controls\PizzaGridView.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="controls\PizzaListView.Designer.vb">
+      <DependentUpon>PizzaListView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="controls\PizzaListView.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Form1.vb">
@@ -121,17 +127,17 @@
     <EmbeddedResource Include="controls\CartElem.resx">
       <DependentUpon>CartElem.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="controls\Pizza.resx">
-      <DependentUpon>Pizza.vb</DependentUpon>
+    <EmbeddedResource Include="controls\PizzaGridView.resx">
+      <DependentUpon>PizzaGridView.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="controls\Filter.resx">
       <DependentUpon>Filter.vb</DependentUpon>
@@ -155,6 +161,8 @@
     <Content Include="images\Kebab.jpg" />
     <Content Include="images\Quatre fromages.jpg" />
     <Content Include="images\Reine.jpg" />
+    <None Include="Resources\GridIcon.png" />
+    <None Include="Resources\ListIcon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

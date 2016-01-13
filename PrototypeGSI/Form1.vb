@@ -13,7 +13,7 @@
     Private Sub TreeView1_NodeMouseClick(sender As Object, e As TreeNodeMouseClickEventArgs) Handles TreeView1.NodeMouseClick
         If (e.Node.Parent IsNot Nothing) Then
             If (e.Node.Parent.GetType() Is GetType(TreeNode)) Then
-                myFilters.Clicked(e.Node)
+                myFilters.TreeClicked(e.Node)
             End If
         End If
     End Sub
@@ -27,10 +27,10 @@
         FilterPanel.Controls.Add(newFilter)
     End Sub
 
-    Public Sub ShowPizzas(pizzas As List(Of PizzaPanel))
+    Public Sub ShowPizzas(pizzas As List(Of PizzaGridView))
         PizzaLayoutPanel.Controls.Clear()
 
-        For Each Pizza As PizzaPanel In pizzas
+        For Each Pizza As PizzaGridView In pizzas
             PizzaLayoutPanel.Controls.Add(Pizza)
         Next
     End Sub

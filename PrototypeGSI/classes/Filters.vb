@@ -8,7 +8,7 @@
     Sub New(form As Form1)
         myForm = form
         Database.Init()
-        ShowPizzas()
+        RefreshPizzas()
     End Sub
 
     Public Sub RemoveFilter(node As TreeNode)
@@ -18,7 +18,7 @@
             filter.Destroy()
             Dictionary.Remove(node)
         End If
-        ShowPizzas()
+        RefreshPizzas()
     End Sub
 
     Private Sub AddFilter(node As TreeNode)
@@ -27,25 +27,29 @@
         myForm.AddFilter(filter)
     End Sub
 
-    Public Sub Clicked(node As TreeNode)
+    Public Sub TreeClicked(node As TreeNode)
         Dim filter As Filter
         filter = Nothing
         If Dictionary.TryGetValue(node, filter) Then
-            filter.Clicked()
+            filter.TreeClicked()
         Else
             AddFilter(node)
         End If
-        ShowPizzas()
+        RefreshPizzas()
     End Sub
 
-    Private Sub ShowPizzas()
+    Public Sub FilterClicked(filter As Filter)
+        filter.FilterClicked()
+        RefreshPizzas()
+    End Sub
+
+    Private Sub RefreshPizzas()
         Form1.ShowPizzas(FilterPizzas)
     End Sub
 
-    Private Function FilterPizzas() As List(Of PizzaPanel)
-        Dim list As New List(Of PizzaPanel)
-        Dim pizzaPanel As PizzaPanel = Nothing
-
+    Private Function FilterPizzas() As List(Of PizzaGridView)
+        Dim list As New List(Of PizzaGridView)
+        Dim pizzaPanel As PizzaGridView = Nothing
 
         For Each Pizza As Pizza In Database.pizzas.Keys
             If (FilterPizza(Pizza) = True) Then
