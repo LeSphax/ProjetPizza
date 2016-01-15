@@ -76,7 +76,6 @@
     <Compile Include="classes\Database.vb" />
     <Compile Include="classes\Filters.vb" />
     <Compile Include="classes\Pizza.vb" />
-    <Compile Include="classes\Pizzaview.vb" />
     <Compile Include="controls\CartElem.Designer.vb">
       <DependentUpon>CartElem.vb</DependentUpon>
     </Compile>

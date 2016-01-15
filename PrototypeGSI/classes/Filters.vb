@@ -44,20 +44,16 @@
     End Sub
 
     Private Sub RefreshPizzas()
-        Form1.ShowPizzas(FilterPizzas)
+        Form1.RefreshPizzas(FilterPizzas)
     End Sub
 
-    Private Function FilterPizzas() As List(Of UserControl)
-        Dim list As New List(Of UserControl)
-        Dim pizzaPanel As UserControl = Nothing
+    Private Function FilterPizzas() As List(Of Pizza)
+        Dim list As New List(Of Pizza)
+        Dim pizzaPanel As Pizza = Nothing
 
-        For Each Pizza As Pizza In Database.pizzas.Keys
+        For Each Pizza As Pizza In Database.pizzas
             If (FilterPizza(Pizza) = True) Then
-                If (Database.pizzas.TryGetValue(Pizza, pizzaPanel)) Then
-                    list.Add(pizzaPanel)
-                Else
-                    Debug.Fail("There is no panel associated to this pizza")
-                End If
+                list.Add(Pizza)
 
             End If
         Next

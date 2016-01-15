@@ -35,7 +35,8 @@ Partial Class PizzaListView
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(0, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(476, 17)
+        Me.Label1.Padding = New System.Windows.Forms.Padding(0, 0, 5, 0)
+        Me.Label1.Size = New System.Drawing.Size(921, 17)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Label1"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -44,8 +45,10 @@ Partial Class PizzaListView
         '
         Me.Label2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label2.Location = New System.Drawing.Point(0, 17)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(3)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(476, 37)
+        Me.Label2.Padding = New System.Windows.Forms.Padding(0, 0, 0, 5)
+        Me.Label2.Size = New System.Drawing.Size(921, 37)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Label2"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.BottomLeft
@@ -53,7 +56,7 @@ Partial Class PizzaListView
         'addToCart
         '
         Me.addToCart.Dock = System.Windows.Forms.DockStyle.Right
-        Me.addToCart.Location = New System.Drawing.Point(476, 0)
+        Me.addToCart.Location = New System.Drawing.Point(921, 0)
         Me.addToCart.Name = "addToCart"
         Me.addToCart.Size = New System.Drawing.Size(79, 54)
         Me.addToCart.TabIndex = 2
@@ -67,17 +70,21 @@ Partial Class PizzaListView
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(476, 54)
+        Me.Panel1.Size = New System.Drawing.Size(921, 54)
         Me.Panel1.TabIndex = 3
         '
         'PizzaListView
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoSize = True
+        Me.BackColor = System.Drawing.SystemColors.Highlight
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.addToCart)
+        Me.MaximumSize = New System.Drawing.Size(2000, 54)
+        Me.MinimumSize = New System.Drawing.Size(500, 54)
         Me.Name = "PizzaListView"
-        Me.Size = New System.Drawing.Size(555, 54)
+        Me.Size = New System.Drawing.Size(1000, 54)
         Me.Panel1.ResumeLayout(False)
         Me.ResumeLayout(False)
 

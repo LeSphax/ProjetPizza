@@ -2,6 +2,21 @@
 
     Dim myFilters As Filters
 
+    Enum State
+        LIST
+        GRID
+    End Enum
+
+    Dim myState As State
+    Dim pizzasToShow As List(Of Pizza)
+    Friend WithEvents PizzaLayoutPanel As Panel
+
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
+        CreatePizzaLayoutPanel()
+        myFilters = New Filters(Me)
+        myState = State.GRID
+    End Sub
+
     Private Sub treeView_DrawNode(sender As Object, e As DrawTreeNodeEventArgs) Handles TreeView1.DrawNode
         e.DrawDefault = True
     End Sub
@@ -27,11 +42,26 @@
         FilterPanel.Controls.Add(newFilter)
     End Sub
 
-    Public Sub ShowPizzas(pizzas As List(Of UserControl))
+    Public Sub RefreshPizzas(newPizzasToShow As List(Of Pizza))
+        pizzasToShow = newPizzasToShow
+        RefreshView()
+    End Sub
+
+    Private Sub RefreshView()
         PizzaLayoutPanel.Controls.Clear()
 
-        For Each Pizza As UserControl In pizzas
-            PizzaLayoutPanel.Controls.Add(Pizza)
+        For Each Pizza As Pizza In pizzasToShow
+            Select Case myState
+                Case State.LIST
+                    Dim pizzal As PizzaListView = New PizzaListView(Pizza)
+                    pizzal.Dock = DockStyle.Fill
+
+                    PizzaLayoutPanel.Controls.Add(pizzal)
+
+                Case State.GRID
+                    PizzaLayoutPanel.Controls.Add(New PizzaGridView(Pizza))
+            End Select
+
         Next
     End Sub
 
@@ -45,11 +75,6 @@
         sumLabel.Text += pizza.Price
     End Sub
 
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
-        myFilters = New Filters(Me)
-    End Sub
-
-
     Private Sub viderBtn_Click(sender As Object, e As EventArgs) Handles viderBtn.Click
         CartLayoutPanel.Controls.Clear()
         sumLabel.Text = 0.0
@@ -60,4 +85,39 @@
         CartLayoutPanel.Controls.Clear()
         sumLabel.Text = 0.0
     End Sub
+
+    Private Sub GridButton_CLick(sender As Object, e As EventArgs) Handles GridButton.Click
+        myState = State.GRID
+        CreatePizzaLayoutPanel()
+        RefreshView()
+    End Sub
+
+    Private Sub ListButton_Click(sender As Object, e As EventArgs) Handles ListButton.Click
+        myState = State.LIST
+        CreatePizzaLayoutPanel()
+        RefreshView()
+    End Sub
+
+    Private Sub CreatePizzaLayoutPanel()
+        Panel6.Controls.Remove(PizzaLayoutPanel)
+
+        Select Case myState
+            Case State.GRID
+                PizzaLayoutPanel = New FlowLayoutPanel
+            Case State.LIST
+                Dim temp As TableLayoutPanel = New TableLayoutPanel
+                temp.ColumnCount = 1
+                PizzaLayoutPanel = temp
+        End Select
+        Panel6.Controls.Add(PizzaLayoutPanel)
+        Panel6.Controls.SetChildIndex(PizzaLayoutPanel, 0)
+        PizzaLayoutPanel.AutoScroll = True
+        PizzaLayoutPanel.AutoSize = False
+        PizzaLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill
+        PizzaLayoutPanel.Location = New System.Drawing.Point(0, 100)
+        PizzaLayoutPanel.Name = "PizzaLayoutPanel"
+        Me.PizzaLayoutPanel.Size = New System.Drawing.Size(837, 606)
+        Refresh()
+    End Sub
+
 End Class

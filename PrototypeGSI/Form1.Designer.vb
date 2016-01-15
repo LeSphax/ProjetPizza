@@ -22,28 +22,27 @@ Partial Class Form1
     'Ne la modifiez pas à l'aide de l'éditeur de code.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim TreeNode64 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Les Meilleures")
-        Dim TreeNode65 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Végétariennes")
-        Dim TreeNode66 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Hallal")
-        Dim TreeNode67 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Type", New System.Windows.Forms.TreeNode() {TreeNode64, TreeNode65, TreeNode66})
-        Dim TreeNode68 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Tomate")
-        Dim TreeNode69 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Crème Fraiche")
-        Dim TreeNode70 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Sauce Blanche")
-        Dim TreeNode71 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Sauce", New System.Windows.Forms.TreeNode() {TreeNode68, TreeNode69, TreeNode70})
-        Dim TreeNode72 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Jambon")
-        Dim TreeNode73 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Boeuf")
-        Dim TreeNode74 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Kebab")
-        Dim TreeNode75 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Viande", New System.Windows.Forms.TreeNode() {TreeNode72, TreeNode73, TreeNode74})
-        Dim TreeNode76 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Mozzarella")
-        Dim TreeNode77 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Roquefort")
-        Dim TreeNode78 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Reblochon")
-        Dim TreeNode79 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Chèvre")
-        Dim TreeNode80 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Fromage", New System.Windows.Forms.TreeNode() {TreeNode76, TreeNode77, TreeNode78, TreeNode79})
-        Dim TreeNode81 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Ail")
-        Dim TreeNode82 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Oignons")
-        Dim TreeNode83 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Champignons")
-        Dim TreeNode84 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Autres", New System.Windows.Forms.TreeNode() {TreeNode81, TreeNode82, TreeNode83})
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
+        Dim TreeNode43 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Les Meilleures")
+        Dim TreeNode44 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Végétariennes")
+        Dim TreeNode45 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Hallal")
+        Dim TreeNode46 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Type", New System.Windows.Forms.TreeNode() {TreeNode43, TreeNode44, TreeNode45})
+        Dim TreeNode47 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Tomate")
+        Dim TreeNode48 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Crème Fraiche")
+        Dim TreeNode49 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Sauce Blanche")
+        Dim TreeNode50 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Sauce", New System.Windows.Forms.TreeNode() {TreeNode47, TreeNode48, TreeNode49})
+        Dim TreeNode51 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Jambon")
+        Dim TreeNode52 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Boeuf")
+        Dim TreeNode53 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Kebab")
+        Dim TreeNode54 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Viande", New System.Windows.Forms.TreeNode() {TreeNode51, TreeNode52, TreeNode53})
+        Dim TreeNode55 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Mozzarella")
+        Dim TreeNode56 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Roquefort")
+        Dim TreeNode57 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Reblochon")
+        Dim TreeNode58 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Chèvre")
+        Dim TreeNode59 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Fromage", New System.Windows.Forms.TreeNode() {TreeNode55, TreeNode56, TreeNode57, TreeNode58})
+        Dim TreeNode60 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Ail")
+        Dim TreeNode61 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Oignons")
+        Dim TreeNode62 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Champignons")
+        Dim TreeNode63 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Autres", New System.Windows.Forms.TreeNode() {TreeNode60, TreeNode61, TreeNode62})
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.TreeView1 = New System.Windows.Forms.TreeView()
@@ -57,17 +56,14 @@ Partial Class Form1
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.FilterPanel = New System.Windows.Forms.FlowLayoutPanel()
         Me.Panel5 = New System.Windows.Forms.Panel()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.ListButton = New System.Windows.Forms.Button()
+        Me.GridButton = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel6 = New System.Windows.Forms.Panel()
-        Me.PizzaLayoutPanel = New System.Windows.Forms.FlowLayoutPanel()
         Me.CartPanelForm.SuspendLayout()
         Me.Panel4.SuspendLayout()
         Me.Panel5.SuspendLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.Panel6.SuspendLayout()
@@ -101,49 +97,49 @@ Partial Class Form1
         Me.TreeView1.Location = New System.Drawing.Point(0, 39)
         Me.TreeView1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TreeView1.Name = "TreeView1"
-        TreeNode64.Name = "Type1"
-        TreeNode64.Text = "Les Meilleures"
-        TreeNode65.Name = "Type2"
-        TreeNode65.Text = "Végétariennes"
-        TreeNode66.Name = "Type3"
-        TreeNode66.Text = "Hallal"
-        TreeNode67.Name = "TypeNode"
-        TreeNode67.Text = "Type"
-        TreeNode68.Name = "Sauce1"
-        TreeNode68.Text = "Tomate"
-        TreeNode69.Name = "Sauce2"
-        TreeNode69.Text = "Crème Fraiche"
-        TreeNode70.Name = "Sauce3"
-        TreeNode70.Text = "Sauce Blanche"
-        TreeNode71.Name = "SauceNode"
-        TreeNode71.Text = "Sauce"
-        TreeNode72.Name = "JambonNode"
-        TreeNode72.Text = "Jambon"
-        TreeNode73.Name = "BoeufNode"
-        TreeNode73.Text = "Boeuf"
-        TreeNode74.Name = "KebabNode"
-        TreeNode74.Text = "Kebab"
-        TreeNode75.Name = "ViandeNode"
-        TreeNode75.Text = "Viande"
-        TreeNode76.Name = "MozzarellaNode"
-        TreeNode76.Text = "Mozzarella"
-        TreeNode77.Name = "RoquefortNode"
-        TreeNode77.Text = "Roquefort"
-        TreeNode78.Name = "ReblochonNode"
-        TreeNode78.Text = "Reblochon"
-        TreeNode79.Name = "ChèvreNode"
-        TreeNode79.Text = "Chèvre"
-        TreeNode80.Name = "FromageNode"
-        TreeNode80.Text = "Fromage"
-        TreeNode81.Name = "AilNode"
-        TreeNode81.Text = "Ail"
-        TreeNode82.Name = "OignonsNode"
-        TreeNode82.Text = "Oignons"
-        TreeNode83.Name = "ChampignonsNode"
-        TreeNode83.Text = "Champignons"
-        TreeNode84.Name = "AutresNode"
-        TreeNode84.Text = "Autres"
-        Me.TreeView1.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode67, TreeNode71, TreeNode75, TreeNode80, TreeNode84})
+        TreeNode43.Name = "Type1"
+        TreeNode43.Text = "Les Meilleures"
+        TreeNode44.Name = "Type2"
+        TreeNode44.Text = "Végétariennes"
+        TreeNode45.Name = "Type3"
+        TreeNode45.Text = "Hallal"
+        TreeNode46.Name = "TypeNode"
+        TreeNode46.Text = "Type"
+        TreeNode47.Name = "Sauce1"
+        TreeNode47.Text = "Tomate"
+        TreeNode48.Name = "Sauce2"
+        TreeNode48.Text = "Crème Fraiche"
+        TreeNode49.Name = "Sauce3"
+        TreeNode49.Text = "Sauce Blanche"
+        TreeNode50.Name = "SauceNode"
+        TreeNode50.Text = "Sauce"
+        TreeNode51.Name = "JambonNode"
+        TreeNode51.Text = "Jambon"
+        TreeNode52.Name = "BoeufNode"
+        TreeNode52.Text = "Boeuf"
+        TreeNode53.Name = "KebabNode"
+        TreeNode53.Text = "Kebab"
+        TreeNode54.Name = "ViandeNode"
+        TreeNode54.Text = "Viande"
+        TreeNode55.Name = "MozzarellaNode"
+        TreeNode55.Text = "Mozzarella"
+        TreeNode56.Name = "RoquefortNode"
+        TreeNode56.Text = "Roquefort"
+        TreeNode57.Name = "ReblochonNode"
+        TreeNode57.Text = "Reblochon"
+        TreeNode58.Name = "ChèvreNode"
+        TreeNode58.Text = "Chèvre"
+        TreeNode59.Name = "FromageNode"
+        TreeNode59.Text = "Fromage"
+        TreeNode60.Name = "AilNode"
+        TreeNode60.Text = "Ail"
+        TreeNode61.Name = "OignonsNode"
+        TreeNode61.Text = "Oignons"
+        TreeNode62.Name = "ChampignonsNode"
+        TreeNode62.Text = "Champignons"
+        TreeNode63.Name = "AutresNode"
+        TreeNode63.Text = "Autres"
+        Me.TreeView1.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode46, TreeNode50, TreeNode54, TreeNode59, TreeNode63})
         Me.TreeView1.Size = New System.Drawing.Size(200, 667)
         Me.TreeView1.TabIndex = 5
         '
@@ -249,32 +245,33 @@ Partial Class Form1
         '
         'Panel5
         '
-        Me.Panel5.Controls.Add(Me.PictureBox2)
-        Me.Panel5.Controls.Add(Me.PictureBox1)
+        Me.Panel5.Controls.Add(Me.ListButton)
+        Me.Panel5.Controls.Add(Me.GridButton)
         Me.Panel5.Dock = System.Windows.Forms.DockStyle.Right
         Me.Panel5.Location = New System.Drawing.Point(635, 0)
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(200, 98)
         Me.Panel5.TabIndex = 0
         '
-        'PictureBox2
+        'ListButton
         '
-        Me.PictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(35, 22)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(50, 50)
-        Me.PictureBox2.TabIndex = 1
-        Me.PictureBox2.TabStop = False
+        Me.ListButton.BackgroundImage = Global.PrototypeGSI.My.Resources.Resources.ListIcon
+        Me.ListButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.ListButton.Location = New System.Drawing.Point(110, 24)
+        Me.ListButton.Name = "ListButton"
+        Me.ListButton.Size = New System.Drawing.Size(50, 50)
+        Me.ListButton.TabIndex = 1
+        Me.ListButton.UseVisualStyleBackColor = True
         '
-        'PictureBox1
+        'GridButton
         '
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(122, 22)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(50, 50)
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
+        Me.GridButton.BackgroundImage = Global.PrototypeGSI.My.Resources.Resources.GridIcon
+        Me.GridButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.GridButton.Location = New System.Drawing.Point(32, 24)
+        Me.GridButton.Name = "GridButton"
+        Me.GridButton.Size = New System.Drawing.Size(50, 50)
+        Me.GridButton.TabIndex = 0
+        Me.GridButton.UseVisualStyleBackColor = True
         '
         'Panel2
         '
@@ -299,7 +296,6 @@ Partial Class Form1
         '
         'Panel6
         '
-        Me.Panel6.Controls.Add(Me.PizzaLayoutPanel)
         Me.Panel6.Controls.Add(Me.Panel4)
         Me.Panel6.Controls.Add(Me.CartPanelForm)
         Me.Panel6.Dock = System.Windows.Forms.DockStyle.Fill
@@ -308,15 +304,6 @@ Partial Class Form1
         Me.Panel6.Name = "Panel6"
         Me.Panel6.Size = New System.Drawing.Size(1064, 706)
         Me.Panel6.TabIndex = 7
-        '
-        'PizzaLayoutPanel
-        '
-        Me.PizzaLayoutPanel.AutoScroll = True
-        Me.PizzaLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PizzaLayoutPanel.Location = New System.Drawing.Point(0, 100)
-        Me.PizzaLayoutPanel.Name = "PizzaLayoutPanel"
-        Me.PizzaLayoutPanel.Size = New System.Drawing.Size(837, 606)
-        Me.PizzaLayoutPanel.TabIndex = 0
         '
         'Form1
         '
@@ -334,8 +321,6 @@ Partial Class Form1
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
         Me.Panel5.ResumeLayout(False)
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
@@ -359,7 +344,6 @@ Partial Class Form1
     Friend WithEvents CartLayoutPanel As System.Windows.Forms.FlowLayoutPanel
     Friend WithEvents viderBtn As System.Windows.Forms.Button
     Friend WithEvents Panel5 As Panel
-    Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents PictureBox2 As PictureBox
-    Friend WithEvents PizzaLayoutPanel As FlowLayoutPanel
+    Friend WithEvents GridButton As Button
+    Friend WithEvents ListButton As Button
 End Class
