@@ -27,10 +27,10 @@
         FilterPanel.Controls.Add(newFilter)
     End Sub
 
-    Public Sub ShowPizzas(pizzas As List(Of PizzaGridView))
+    Public Sub ShowPizzas(pizzas As List(Of UserControl))
         PizzaLayoutPanel.Controls.Clear()
 
-        For Each Pizza As PizzaGridView In pizzas
+        For Each Pizza As UserControl In pizzas
             PizzaLayoutPanel.Controls.Add(Pizza)
         Next
     End Sub

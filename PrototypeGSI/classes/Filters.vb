@@ -47,9 +47,9 @@
         Form1.ShowPizzas(FilterPizzas)
     End Sub
 
-    Private Function FilterPizzas() As List(Of PizzaGridView)
-        Dim list As New List(Of PizzaGridView)
-        Dim pizzaPanel As PizzaGridView = Nothing
+    Private Function FilterPizzas() As List(Of UserControl)
+        Dim list As New List(Of UserControl)
+        Dim pizzaPanel As UserControl = Nothing
 
         For Each Pizza As Pizza In Database.pizzas.Keys
             If (FilterPizza(Pizza) = True) Then

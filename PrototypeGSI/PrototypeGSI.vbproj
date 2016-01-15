@@ -76,6 +76,7 @@
     <Compile Include="classes\Database.vb" />
     <Compile Include="classes\Filters.vb" />
     <Compile Include="classes\Pizza.vb" />
+    <Compile Include="classes\Pizzaview.vb" />
     <Compile Include="controls\CartElem.Designer.vb">
       <DependentUpon>CartElem.vb</DependentUpon>
     </Compile>
@@ -129,6 +130,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="controls\PizzaGridView.resx">
       <DependentUpon>PizzaGridView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="controls\PizzaListView.resx">
+      <DependentUpon>PizzaListView.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
