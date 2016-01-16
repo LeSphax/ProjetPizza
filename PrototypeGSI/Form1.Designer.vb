@@ -22,20 +22,19 @@ Partial Class Form1
     'Ne la modifiez pas à l'aide de l'éditeur de code.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim TreeNode9 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Les Meilleures")
-        Dim TreeNode10 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Végétariennes")
-        Dim TreeNode11 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Hallal")
-        Dim TreeNode12 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Type", New System.Windows.Forms.TreeNode() {TreeNode9, TreeNode10, TreeNode11})
-        Dim TreeNode13 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Tomate")
-        Dim TreeNode14 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Crème fraiche")
-        Dim TreeNode15 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Harissa")
-        Dim TreeNode16 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Sauce", New System.Windows.Forms.TreeNode() {TreeNode13, TreeNode14, TreeNode15})
+        Dim TreeNode17 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Les Meilleures")
+        Dim TreeNode18 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Végétariennes")
+        Dim TreeNode19 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Hallal")
+        Dim TreeNode20 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Type", New System.Windows.Forms.TreeNode() {TreeNode17, TreeNode18, TreeNode19})
+        Dim TreeNode21 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Tomate")
+        Dim TreeNode22 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Crème fraiche")
+        Dim TreeNode23 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Harissa")
+        Dim TreeNode24 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Sauce", New System.Windows.Forms.TreeNode() {TreeNode21, TreeNode22, TreeNode23})
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.TreeView1 = New System.Windows.Forms.TreeView()
         Me.CartPanelForm = New System.Windows.Forms.Panel()
         Me.viderBtn = New System.Windows.Forms.Button()
-        Me.CartLayoutPanel = New System.Windows.Forms.FlowLayoutPanel()
         Me.sumLabel = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.validerBtn = New System.Windows.Forms.Button()
@@ -46,6 +45,7 @@ Partial Class Form1
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.CartLayoutPanel = New System.Windows.Forms.FlowLayoutPanel()
         Me.CartPanelForm.SuspendLayout()
         Me.Panel4.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -82,23 +82,23 @@ Partial Class Form1
         Me.TreeView1.Location = New System.Drawing.Point(0, 32)
         Me.TreeView1.Margin = New System.Windows.Forms.Padding(2)
         Me.TreeView1.Name = "TreeView1"
-        TreeNode9.Name = "Type1"
-        TreeNode9.Text = "Les Meilleures"
-        TreeNode10.Name = "Type2"
-        TreeNode10.Text = "Végétariennes"
-        TreeNode11.Name = "Type3"
-        TreeNode11.Text = "Hallal"
-        TreeNode12.Name = "Type"
-        TreeNode12.Text = "Type"
-        TreeNode13.Name = "Sauce1"
-        TreeNode13.Text = "Tomate"
-        TreeNode14.Name = "Sauce2"
-        TreeNode14.Text = "Crème fraiche"
-        TreeNode15.Name = "Sauce3"
-        TreeNode15.Text = "Harissa"
-        TreeNode16.Name = "Sauce"
-        TreeNode16.Text = "Sauce"
-        Me.TreeView1.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode12, TreeNode16})
+        TreeNode17.Name = "Type1"
+        TreeNode17.Text = "Les Meilleures"
+        TreeNode18.Name = "Type2"
+        TreeNode18.Text = "Végétariennes"
+        TreeNode19.Name = "Type3"
+        TreeNode19.Text = "Hallal"
+        TreeNode20.Name = "Type"
+        TreeNode20.Text = "Type"
+        TreeNode21.Name = "Sauce1"
+        TreeNode21.Text = "Tomate"
+        TreeNode22.Name = "Sauce2"
+        TreeNode22.Text = "Crème fraiche"
+        TreeNode23.Name = "Sauce3"
+        TreeNode23.Text = "Harissa"
+        TreeNode24.Name = "Sauce"
+        TreeNode24.Text = "Sauce"
+        Me.TreeView1.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode20, TreeNode24})
         Me.TreeView1.Size = New System.Drawing.Size(150, 541)
         Me.TreeView1.TabIndex = 5
         '
@@ -106,8 +106,8 @@ Partial Class Form1
         '
         Me.CartPanelForm.BackColor = System.Drawing.SystemColors.Control
         Me.CartPanelForm.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.CartPanelForm.Controls.Add(Me.viderBtn)
         Me.CartPanelForm.Controls.Add(Me.CartLayoutPanel)
+        Me.CartPanelForm.Controls.Add(Me.viderBtn)
         Me.CartPanelForm.Controls.Add(Me.sumLabel)
         Me.CartPanelForm.Controls.Add(Me.Label3)
         Me.CartPanelForm.Controls.Add(Me.validerBtn)
@@ -127,13 +127,6 @@ Partial Class Form1
         Me.viderBtn.TabIndex = 5
         Me.viderBtn.Text = "Vider"
         Me.viderBtn.UseVisualStyleBackColor = True
-        '
-        'CartLayoutPanel
-        '
-        Me.CartLayoutPanel.Location = New System.Drawing.Point(18, 31)
-        Me.CartLayoutPanel.Name = "CartLayoutPanel"
-        Me.CartLayoutPanel.Size = New System.Drawing.Size(141, 463)
-        Me.CartLayoutPanel.TabIndex = 4
         '
         'sumLabel
         '
@@ -254,6 +247,14 @@ Partial Class Form1
         Me.Panel6.Size = New System.Drawing.Size(798, 573)
         Me.Panel6.TabIndex = 7
         '
+        'CartLayoutPanel
+        '
+        Me.CartLayoutPanel.AutoScroll = True
+        Me.CartLayoutPanel.Location = New System.Drawing.Point(7, 17)
+        Me.CartLayoutPanel.Name = "CartLayoutPanel"
+        Me.CartLayoutPanel.Size = New System.Drawing.Size(151, 489)
+        Me.CartLayoutPanel.TabIndex = 6
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -289,6 +290,6 @@ Partial Class Form1
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents validerBtn As System.Windows.Forms.Button
     Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents CartLayoutPanel As System.Windows.Forms.FlowLayoutPanel
     Friend WithEvents viderBtn As System.Windows.Forms.Button
+    Friend WithEvents CartLayoutPanel As System.Windows.Forms.FlowLayoutPanel
 End Class

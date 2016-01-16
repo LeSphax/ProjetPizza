@@ -22,7 +22,7 @@
 
             Case False
                 Form1.AddToCartNewPizza(_pizza)
-            
+
         End Select
 
 

@@ -38,15 +38,16 @@ Partial Class CartElem
         Me.Panel2.Controls.Add(Me.pizzaQteLabel)
         Me.Panel2.Controls.Add(Me.pizzaPriceLabel)
         Me.Panel2.Controls.Add(Me.pizzaNameLabel)
-        Me.Panel2.Location = New System.Drawing.Point(3, 6)
+        Me.Panel2.Location = New System.Drawing.Point(3, 7)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(144, 35)
+        Me.Panel2.Size = New System.Drawing.Size(171, 55)
         Me.Panel2.TabIndex = 2
         '
         'pizzaQteLabel
         '
+        Me.pizzaQteLabel.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.pizzaQteLabel.AutoSize = True
-        Me.pizzaQteLabel.Location = New System.Drawing.Point(60, 9)
+        Me.pizzaQteLabel.Location = New System.Drawing.Point(3, 33)
         Me.pizzaQteLabel.Name = "pizzaQteLabel"
         Me.pizzaQteLabel.Size = New System.Drawing.Size(24, 13)
         Me.pizzaQteLabel.TabIndex = 2
@@ -54,17 +55,20 @@ Partial Class CartElem
         '
         'pizzaPriceLabel
         '
+        Me.pizzaPriceLabel.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.pizzaPriceLabel.AutoSize = True
-        Me.pizzaPriceLabel.Location = New System.Drawing.Point(105, 9)
+        Me.pizzaPriceLabel.Location = New System.Drawing.Point(127, 33)
         Me.pizzaPriceLabel.Name = "pizzaPriceLabel"
         Me.pizzaPriceLabel.Size = New System.Drawing.Size(24, 13)
         Me.pizzaPriceLabel.TabIndex = 1
         Me.pizzaPriceLabel.Text = "Prix"
+        Me.pizzaPriceLabel.TextAlign = System.Drawing.ContentAlignment.TopRight
         '
         'pizzaNameLabel
         '
+        Me.pizzaNameLabel.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.pizzaNameLabel.AutoSize = True
-        Me.pizzaNameLabel.Location = New System.Drawing.Point(3, 9)
+        Me.pizzaNameLabel.Location = New System.Drawing.Point(49, 9)
         Me.pizzaNameLabel.Name = "pizzaNameLabel"
         Me.pizzaNameLabel.Size = New System.Drawing.Size(32, 13)
         Me.pizzaNameLabel.TabIndex = 0
@@ -73,14 +77,14 @@ Partial Class CartElem
         'Panel1
         '
         Me.Panel1.Controls.Add(Me.deleteBtn)
-        Me.Panel1.Location = New System.Drawing.Point(3, 44)
+        Me.Panel1.Location = New System.Drawing.Point(3, 66)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(141, 31)
+        Me.Panel1.Size = New System.Drawing.Size(171, 31)
         Me.Panel1.TabIndex = 3
         '
         'deleteBtn
         '
-        Me.deleteBtn.Location = New System.Drawing.Point(3, 3)
+        Me.deleteBtn.Location = New System.Drawing.Point(33, 3)
         Me.deleteBtn.Name = "deleteBtn"
         Me.deleteBtn.Size = New System.Drawing.Size(75, 23)
         Me.deleteBtn.TabIndex = 0
@@ -94,7 +98,7 @@ Partial Class CartElem
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Panel2)
         Me.Name = "CartElem"
-        Me.Size = New System.Drawing.Size(150, 82)
+        Me.Size = New System.Drawing.Size(177, 98)
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         Me.Panel1.ResumeLayout(False)

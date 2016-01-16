@@ -32,19 +32,17 @@ Partial Class PizzaPanel
         '
         'PictureBox1
         '
-        Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
         Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(133, 97)
+        Me.PictureBox1.Size = New System.Drawing.Size(133, 84)
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         '
         'Label1
         '
-        Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(43, 2)
+        Me.Label1.Location = New System.Drawing.Point(47, 92)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(39, 13)
@@ -54,18 +52,20 @@ Partial Class PizzaPanel
         'Panel1
         '
         Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel1.Location = New System.Drawing.Point(0, 97)
+        Me.Panel1.Controls.Add(Me.PictureBox1)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(133, 26)
+        Me.Panel1.Size = New System.Drawing.Size(133, 137)
         Me.Panel1.TabIndex = 2
         '
         'addToCart
         '
-        Me.addToCart.Location = New System.Drawing.Point(14, 40)
+        Me.addToCart.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.addToCart.Location = New System.Drawing.Point(0, 110)
         Me.addToCart.Name = "addToCart"
-        Me.addToCart.Size = New System.Drawing.Size(98, 27)
+        Me.addToCart.Size = New System.Drawing.Size(133, 27)
         Me.addToCart.TabIndex = 3
         Me.addToCart.Text = "Ajouter au panier"
         Me.addToCart.UseVisualStyleBackColor = True
@@ -75,11 +75,10 @@ Partial Class PizzaPanel
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Controls.Add(Me.addToCart)
-        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Panel1)
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "PizzaPanel"
-        Me.Size = New System.Drawing.Size(133, 123)
+        Me.Size = New System.Drawing.Size(133, 137)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()

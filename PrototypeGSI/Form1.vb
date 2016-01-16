@@ -1,6 +1,7 @@
 ﻿Public Class Form1
 
     Shared filters As New Dictionary(Of String, Filter)
+
     Private Sub treeView_DrawNode(sender As Object, e As DrawTreeNodeEventArgs) Handles TreeView1.DrawNode
         e.DrawDefault = True
     End Sub
@@ -50,13 +51,28 @@
     End Sub
 
     Public Sub AddToCartNewPizza(pizza As Pizza)
-        Dim elem As CartElem = New CartElem(pizza)
-        CartLayoutPanel.Controls.Add(elem)
+        CartLayoutPanel.Controls.Add(New CartElem(pizza))
         sumLabel.Text += pizza.Price
     End Sub
 
     Public Sub AddToCart(pizza As Pizza)
         sumLabel.Text += pizza.Price
+        Dim index As Integer = 0
+        Dim newCartElem As CartElem
+        For Each elem In CartLayoutPanel.Controls
+            Dim e As CartElem = DirectCast(elem, CartElem)
+            If e.ContainsPizza(pizza) Then
+                index = CartLayoutPanel.Controls.GetChildIndex(e)
+                CartLayoutPanel.Controls.Remove(e)
+                newCartElem = New CartElem(pizza)
+                CartLayoutPanel.Controls.Add(newCartElem)
+                CartLayoutPanel.Controls.SetChildIndex(newCartElem, index)
+
+            End If
+
+        Next
+    
+
     End Sub
 
 
@@ -78,6 +94,10 @@
 
 
     Private Sub viderBtn_Click(sender As Object, e As EventArgs) Handles viderBtn.Click
+        For Each control In CartLayoutPanel.Controls
+            Dim elem As CartElem = DirectCast(control, CartElem)
+            elem.GetPizza().Delete()
+        Next
         CartLayoutPanel.Controls.Clear()
         sumLabel.Text = 0.0
 
