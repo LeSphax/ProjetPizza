@@ -28,6 +28,7 @@ Partial Class CartElem
         Me.pizzaQte = New System.Windows.Forms.NumericUpDown()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Label1 = New System.Windows.Forms.Label()
         CType(Me.pizzaQte, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -37,7 +38,7 @@ Partial Class CartElem
         '
         Me.pizzaPriceLabel.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.pizzaPriceLabel.AutoSize = True
-        Me.pizzaPriceLabel.Location = New System.Drawing.Point(83, 33)
+        Me.pizzaPriceLabel.Location = New System.Drawing.Point(66, 29)
         Me.pizzaPriceLabel.Name = "pizzaPriceLabel"
         Me.pizzaPriceLabel.Size = New System.Drawing.Size(24, 13)
         Me.pizzaPriceLabel.TabIndex = 1
@@ -48,7 +49,7 @@ Partial Class CartElem
         '
         Me.pizzaNameLabel.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.pizzaNameLabel.AutoSize = True
-        Me.pizzaNameLabel.Location = New System.Drawing.Point(14, 11)
+        Me.pizzaNameLabel.Location = New System.Drawing.Point(7, 6)
         Me.pizzaNameLabel.Name = "pizzaNameLabel"
         Me.pizzaNameLabel.Size = New System.Drawing.Size(32, 13)
         Me.pizzaNameLabel.TabIndex = 0
@@ -56,7 +57,7 @@ Partial Class CartElem
         '
         'deleteBtn
         '
-        Me.deleteBtn.Location = New System.Drawing.Point(11, 3)
+        Me.deleteBtn.Location = New System.Drawing.Point(19, 3)
         Me.deleteBtn.Name = "deleteBtn"
         Me.deleteBtn.Size = New System.Drawing.Size(75, 23)
         Me.deleteBtn.TabIndex = 0
@@ -65,7 +66,7 @@ Partial Class CartElem
         '
         'pizzaQte
         '
-        Me.pizzaQte.Location = New System.Drawing.Point(11, 31)
+        Me.pizzaQte.Location = New System.Drawing.Point(3, 27)
         Me.pizzaQte.Name = "pizzaQte"
         Me.pizzaQte.Size = New System.Drawing.Size(48, 20)
         Me.pizzaQte.TabIndex = 3
@@ -76,19 +77,31 @@ Partial Class CartElem
         Me.Panel1.Controls.Add(Me.deleteBtn)
         Me.Panel1.Location = New System.Drawing.Point(3, 66)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(127, 31)
+        Me.Panel1.Size = New System.Drawing.Size(114, 31)
         Me.Panel1.TabIndex = 3
         '
         'Panel2
         '
         Me.Panel2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Panel2.Controls.Add(Me.Label1)
         Me.Panel2.Controls.Add(Me.pizzaQte)
         Me.Panel2.Controls.Add(Me.pizzaPriceLabel)
         Me.Panel2.Controls.Add(Me.pizzaNameLabel)
         Me.Panel2.Location = New System.Drawing.Point(3, 7)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(127, 55)
+        Me.Panel2.Size = New System.Drawing.Size(114, 55)
         Me.Panel2.TabIndex = 2
+        '
+        'Label1
+        '
+        Me.Label1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(94, 29)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(13, 13)
+        Me.Label1.TabIndex = 4
+        Me.Label1.Text = "€"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.TopRight
         '
         'CartElem
         '
@@ -97,7 +110,7 @@ Partial Class CartElem
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Panel2)
         Me.Name = "CartElem"
-        Me.Size = New System.Drawing.Size(136, 98)
+        Me.Size = New System.Drawing.Size(124, 98)
         CType(Me.pizzaQte, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
@@ -111,5 +124,6 @@ Partial Class CartElem
     Friend WithEvents pizzaQte As System.Windows.Forms.NumericUpDown
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
+    Friend WithEvents Label1 As System.Windows.Forms.Label
 
 End Class
