@@ -72,16 +72,11 @@
 
     Public Sub AddToCart(pizza As Pizza)
         sumLabel.Text += pizza.Price
-        Dim index As Integer = 0
-        Dim newCartElem As CartElem
+
         For Each elem In CartLayoutPanel.Controls
             Dim e As CartElem = DirectCast(elem, CartElem)
             If e.ContainsPizza(pizza) Then
-                index = CartLayoutPanel.Controls.GetChildIndex(e)
-                CartLayoutPanel.Controls.Remove(e)
-                newCartElem = New CartElem(pizza)
-                CartLayoutPanel.Controls.Add(newCartElem)
-                CartLayoutPanel.Controls.SetChildIndex(newCartElem, index)
+                e.UpdatePizza(pizza)
 
             End If
 

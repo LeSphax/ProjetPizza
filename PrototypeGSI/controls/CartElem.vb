@@ -5,10 +5,14 @@
     Public Sub New(Pizza As Pizza)
         ' Cet appel est requis par le concepteur.
         InitializeComponent()
+        _pizza = Pizza
+        UpdatePizza(_pizza)
+    End Sub
+
+    Public Sub UpdatePizza(Pizza As Pizza)
         pizzaNameLabel.Text = Pizza.Name
         pizzaPriceLabel.Text = Pizza.Price * Pizza.Number
-        NumericUpDown1.Text = Pizza.Number
-        _pizza = Pizza
+        pizzaQte.Text = Pizza.Number
     End Sub
 
     Public Function GetPizza() As Pizza
@@ -26,7 +30,11 @@
         Finalize()
     End Sub
 
-    Private Sub pizzaQte_ValueChanged(sender As Object, e As EventArgs)
-        '    _pizza.Number = 
+    Private Sub pizzaQte_ValueChanged(sender As Object, e As EventArgs) Handles pizzaQte.ValueChanged
+        If _pizza IsNot Nothing Then
+            _pizza.Number = pizzaQte.Value
+            UpdatePizza(_pizza)
+        End If
     End Sub
+
 End Class
