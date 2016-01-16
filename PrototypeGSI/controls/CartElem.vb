@@ -32,8 +32,11 @@
 
     Private Sub pizzaQte_ValueChanged(sender As Object, e As EventArgs) Handles pizzaQte.ValueChanged
         If _pizza IsNot Nothing Then
+            Form1.UpdateTotal(-_pizza.Price * _pizza.Number)
             _pizza.Number = pizzaQte.Value
             UpdatePizza(_pizza)
+            Form1.UpdateTotal(_pizza.Price * _pizza.Number)
+
         End If
     End Sub
 

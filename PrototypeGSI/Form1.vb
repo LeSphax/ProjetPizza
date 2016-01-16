@@ -67,22 +67,19 @@
 
     Public Sub AddToCartNewPizza(pizza As Pizza)
         CartLayoutPanel.Controls.Add(New CartElem(pizza))
-        sumLabel.Text += pizza.Price
+        UpdateTotal(pizza.Price)
     End Sub
 
     Public Sub AddToCart(pizza As Pizza)
-        sumLabel.Text += pizza.Price
+        UpdateTotal(pizza.Price)
 
         For Each elem In CartLayoutPanel.Controls
             Dim e As CartElem = DirectCast(elem, CartElem)
             If e.ContainsPizza(pizza) Then
                 e.UpdatePizza(pizza)
-
             End If
 
         Next
-
-
     End Sub
 
     Private Sub viderBtn_Click(sender As Object, e As EventArgs) Handles viderBtn.Click
@@ -91,14 +88,21 @@
             elem.GetPizza().Delete()
         Next
         CartLayoutPanel.Controls.Clear()
-        sumLabel.Text = 0.0
+        ResetTotal()
 
     End Sub
 
     Private Sub validerBtn_Click(sender As Object, e As EventArgs) Handles validerBtn.Click
         CartLayoutPanel.Controls.Clear()
-        sumLabel.Text = 0.0
+        ResetTotal()
+    End Sub
 
+    Public Sub UpdateTotal(Total As Integer)
+        sumLabel.Text += Total
+    End Sub
+
+    Public Sub ResetTotal()
+        sumLabel.Text = 0
     End Sub
 
     Private Sub GridButton_CLick(sender As Object, e As EventArgs) Handles GridButton.Click
