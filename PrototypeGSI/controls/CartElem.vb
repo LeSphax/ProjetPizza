@@ -7,7 +7,7 @@
         InitializeComponent()
         pizzaNameLabel.Text = Pizza.Name
         pizzaPriceLabel.Text = Pizza.Price * Pizza.Number
-        pizzaQteLabel.Text = Pizza.Number
+        NumericUpDown1.Text = Pizza.Number
         _pizza = Pizza
     End Sub
 
@@ -24,5 +24,9 @@
         _pizza.Delete()
         Parent = Nothing
         Finalize()
+    End Sub
+
+    Private Sub pizzaQte_ValueChanged(sender As Object, e As EventArgs)
+        '    _pizza.Number = 
     End Sub
 End Class
