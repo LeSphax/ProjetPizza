@@ -97,12 +97,12 @@
         ResetTotal()
     End Sub
 
-    Public Sub UpdateTotal(Total As Integer)
+    Public Sub UpdateTotal(Total As Double)
         sumLabel.Text += Total
     End Sub
 
     Public Sub ResetTotal()
-        sumLabel.Text = 0
+        sumLabel.Text = 0.0
     End Sub
 
     Private Sub GridButton_CLick(sender As Object, e As EventArgs) Handles GridButton.Click

@@ -26,6 +26,7 @@
 
     Private Sub deleteBtn_Click(sender As Object, e As EventArgs) Handles deleteBtn.Click
         _pizza.Delete()
+        Form1.UpdateTotal(-_pizza.Price * _pizza.Number)
         Parent = Nothing
         Finalize()
     End Sub
