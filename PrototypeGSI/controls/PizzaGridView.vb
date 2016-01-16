@@ -19,11 +19,7 @@
     Private Sub addToCart_Click(sender As Object, e As EventArgs) Handles addToCart.Click
         Select Case _pizza.InOrOut()
             Case True
-
-                Form1.CartPanelForm.Refresh()
                 Form1.AddToCart(_pizza)
-                '  Form1.AddToCart(Me)
-
             Case False
                 Form1.AddToCartNewPizza(_pizza)
 
