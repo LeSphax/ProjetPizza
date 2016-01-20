@@ -28,7 +28,7 @@
     Private Sub TreeView1_NodeMouseClick(sender As Object, e As TreeNodeMouseClickEventArgs) Handles TreeView1.NodeMouseClick
         If (e.Node.Parent IsNot Nothing) Then
             If (e.Node.Parent.GetType() Is GetType(TreeNode)) Then
-                myFilters.TreeClicked(e.Node)
+                myFilters.TreeClicked_Dialog(e.Node)
             End If
         End If
     End Sub
@@ -38,11 +38,11 @@
         TreeView1_NodeMouseClick(sender, e)
     End Sub
 
-    Public Sub AddFilter(newFilter As Filter)
+    Public Sub AddFilter_Presentation(newFilter As Filter)
         FilterPanel.Controls.Add(newFilter)
     End Sub
 
-    Public Sub RefreshPizzas(newPizzasToShow As List(Of Pizza))
+    Public Sub RefreshPizzas_Presentation(newPizzasToShow As List(Of Pizza))
         pizzasToShow = newPizzasToShow
         RefreshView()
     End Sub

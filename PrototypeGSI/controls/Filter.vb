@@ -36,11 +36,10 @@
 
     Sub SetDesactivated()
         Node.ForeColor = colorDesactivated
-        myFilters.RemoveFilter(Node)
+        myFilters.RemoveFilter_Dialog(Node)
     End Sub
 
-
-    Public Sub TreeClicked()
+    Public Sub TreeClicked_Dialog()
         Select Case MyState
             Case State.Positive
                 SetNegative()
@@ -49,7 +48,7 @@
         End Select
     End Sub
 
-    Public Sub FilterClicked()
+    Public Sub FilterClicked_Dialog()
         Select Case MyState
             Case State.Positive
                 SetNegative()
@@ -68,7 +67,7 @@
     End Sub
 
     Private Sub Filter_Click() Handles Me.Click, Label1.Click
-        MyFilters.FilterClicked(Me)
+        MyFilters.FilterClicked_Dialog(Me)
     End Sub
 
     Private Sub Filter_DoubleClick() Handles Me.DoubleClick, Label1.DoubleClick
@@ -76,7 +75,7 @@
     End Sub
 
 
-    Public Sub Destroy()
+    Public Sub Destroy_Presentation()
 
         Parent = Nothing
         Finalize()
