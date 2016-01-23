@@ -22,36 +22,38 @@ Partial Class Form1
     'Ne la modifiez pas à l'aide de l'éditeur de code.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim TreeNode274 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Les Meilleures")
-        Dim TreeNode275 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Végétariennes")
-        Dim TreeNode276 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Hallal")
-        Dim TreeNode277 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Type", New System.Windows.Forms.TreeNode() {TreeNode274, TreeNode275, TreeNode276})
-        Dim TreeNode278 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Tomate")
-        Dim TreeNode279 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Crème Fraiche")
-        Dim TreeNode280 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Sauce Blanche")
-        Dim TreeNode281 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Sauce", New System.Windows.Forms.TreeNode() {TreeNode278, TreeNode279, TreeNode280})
-        Dim TreeNode282 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Jambon")
-        Dim TreeNode283 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Boeuf")
-        Dim TreeNode284 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Kebab")
-        Dim TreeNode285 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Viande", New System.Windows.Forms.TreeNode() {TreeNode282, TreeNode283, TreeNode284})
-        Dim TreeNode286 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Mozzarella")
-        Dim TreeNode287 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Roquefort")
-        Dim TreeNode288 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Reblochon")
-        Dim TreeNode289 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Chèvre")
-        Dim TreeNode290 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Fromage", New System.Windows.Forms.TreeNode() {TreeNode286, TreeNode287, TreeNode288, TreeNode289})
-        Dim TreeNode291 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Ail")
-        Dim TreeNode292 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Oignons")
-        Dim TreeNode293 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Champignons")
-        Dim TreeNode294 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Autres", New System.Windows.Forms.TreeNode() {TreeNode291, TreeNode292, TreeNode293})
+        Dim TreeNode22 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Les Meilleures")
+        Dim TreeNode23 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Végétariennes")
+        Dim TreeNode24 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Hallal")
+        Dim TreeNode25 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Type", New System.Windows.Forms.TreeNode() {TreeNode22, TreeNode23, TreeNode24})
+        Dim TreeNode26 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Tomate")
+        Dim TreeNode27 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Crème Fraiche")
+        Dim TreeNode28 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Sauce Blanche")
+        Dim TreeNode29 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Sauce", New System.Windows.Forms.TreeNode() {TreeNode26, TreeNode27, TreeNode28})
+        Dim TreeNode30 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Jambon")
+        Dim TreeNode31 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Boeuf")
+        Dim TreeNode32 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Kebab")
+        Dim TreeNode33 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Viande", New System.Windows.Forms.TreeNode() {TreeNode30, TreeNode31, TreeNode32})
+        Dim TreeNode34 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Mozzarella")
+        Dim TreeNode35 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Roquefort")
+        Dim TreeNode36 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Reblochon")
+        Dim TreeNode37 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Chèvre")
+        Dim TreeNode38 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Fromage", New System.Windows.Forms.TreeNode() {TreeNode34, TreeNode35, TreeNode36, TreeNode37})
+        Dim TreeNode39 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Ail")
+        Dim TreeNode40 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Oignons")
+        Dim TreeNode41 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Champignons")
+        Dim TreeNode42 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Autres", New System.Windows.Forms.TreeNode() {TreeNode39, TreeNode40, TreeNode41})
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.TreeView1 = New System.Windows.Forms.TreeView()
         Me.CartPanelForm = New System.Windows.Forms.Panel()
-        Me.CartLayoutPanel = New System.Windows.Forms.FlowLayoutPanel()
-        Me.viderBtn = New System.Windows.Forms.Button()
-        Me.sumLabel = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Panel7 = New System.Windows.Forms.Panel()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.validerBtn = New System.Windows.Forms.Button()
+        Me.viderBtn = New System.Windows.Forms.Button()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.sumLabel = New System.Windows.Forms.Label()
+        Me.CartLayoutPanel = New System.Windows.Forms.FlowLayoutPanel()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.FilterPanel = New System.Windows.Forms.FlowLayoutPanel()
@@ -61,8 +63,9 @@ Partial Class Form1
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel6 = New System.Windows.Forms.Panel()
-        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Coupon1 = New PrototypeGSI.Coupon()
         Me.CartPanelForm.SuspendLayout()
+        Me.Panel7.SuspendLayout()
         Me.Panel4.SuspendLayout()
         Me.Panel5.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -99,49 +102,49 @@ Partial Class Form1
         Me.TreeView1.Location = New System.Drawing.Point(0, 32)
         Me.TreeView1.Margin = New System.Windows.Forms.Padding(2)
         Me.TreeView1.Name = "TreeView1"
-        TreeNode274.Name = "Type1"
-        TreeNode274.Text = "Les Meilleures"
-        TreeNode275.Name = "Type2"
-        TreeNode275.Text = "Végétariennes"
-        TreeNode276.Name = "Type3"
-        TreeNode276.Text = "Hallal"
-        TreeNode277.Name = "TypeNode"
-        TreeNode277.Text = "Type"
-        TreeNode278.Name = "Sauce1"
-        TreeNode278.Text = "Tomate"
-        TreeNode279.Name = "Sauce2"
-        TreeNode279.Text = "Crème Fraiche"
-        TreeNode280.Name = "Sauce3"
-        TreeNode280.Text = "Sauce Blanche"
-        TreeNode281.Name = "SauceNode"
-        TreeNode281.Text = "Sauce"
-        TreeNode282.Name = "JambonNode"
-        TreeNode282.Text = "Jambon"
-        TreeNode283.Name = "BoeufNode"
-        TreeNode283.Text = "Boeuf"
-        TreeNode284.Name = "KebabNode"
-        TreeNode284.Text = "Kebab"
-        TreeNode285.Name = "ViandeNode"
-        TreeNode285.Text = "Viande"
-        TreeNode286.Name = "MozzarellaNode"
-        TreeNode286.Text = "Mozzarella"
-        TreeNode287.Name = "RoquefortNode"
-        TreeNode287.Text = "Roquefort"
-        TreeNode288.Name = "ReblochonNode"
-        TreeNode288.Text = "Reblochon"
-        TreeNode289.Name = "ChèvreNode"
-        TreeNode289.Text = "Chèvre"
-        TreeNode290.Name = "FromageNode"
-        TreeNode290.Text = "Fromage"
-        TreeNode291.Name = "AilNode"
-        TreeNode291.Text = "Ail"
-        TreeNode292.Name = "OignonsNode"
-        TreeNode292.Text = "Oignons"
-        TreeNode293.Name = "ChampignonsNode"
-        TreeNode293.Text = "Champignons"
-        TreeNode294.Name = "AutresNode"
-        TreeNode294.Text = "Autres"
-        Me.TreeView1.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode277, TreeNode281, TreeNode285, TreeNode290, TreeNode294})
+        TreeNode22.Name = "Type1"
+        TreeNode22.Text = "Les Meilleures"
+        TreeNode23.Name = "Type2"
+        TreeNode23.Text = "Végétariennes"
+        TreeNode24.Name = "Type3"
+        TreeNode24.Text = "Hallal"
+        TreeNode25.Name = "TypeNode"
+        TreeNode25.Text = "Type"
+        TreeNode26.Name = "Sauce1"
+        TreeNode26.Text = "Tomate"
+        TreeNode27.Name = "Sauce2"
+        TreeNode27.Text = "Crème Fraiche"
+        TreeNode28.Name = "Sauce3"
+        TreeNode28.Text = "Sauce Blanche"
+        TreeNode29.Name = "SauceNode"
+        TreeNode29.Text = "Sauce"
+        TreeNode30.Name = "JambonNode"
+        TreeNode30.Text = "Jambon"
+        TreeNode31.Name = "BoeufNode"
+        TreeNode31.Text = "Boeuf"
+        TreeNode32.Name = "KebabNode"
+        TreeNode32.Text = "Kebab"
+        TreeNode33.Name = "ViandeNode"
+        TreeNode33.Text = "Viande"
+        TreeNode34.Name = "MozzarellaNode"
+        TreeNode34.Text = "Mozzarella"
+        TreeNode35.Name = "RoquefortNode"
+        TreeNode35.Text = "Roquefort"
+        TreeNode36.Name = "ReblochonNode"
+        TreeNode36.Text = "Reblochon"
+        TreeNode37.Name = "ChèvreNode"
+        TreeNode37.Text = "Chèvre"
+        TreeNode38.Name = "FromageNode"
+        TreeNode38.Text = "Fromage"
+        TreeNode39.Name = "AilNode"
+        TreeNode39.Text = "Ail"
+        TreeNode40.Name = "OignonsNode"
+        TreeNode40.Text = "Oignons"
+        TreeNode41.Name = "ChampignonsNode"
+        TreeNode41.Text = "Champignons"
+        TreeNode42.Name = "AutresNode"
+        TreeNode42.Text = "Autres"
+        Me.TreeView1.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode25, TreeNode29, TreeNode33, TreeNode38, TreeNode42})
         Me.TreeView1.Size = New System.Drawing.Size(150, 535)
         Me.TreeView1.TabIndex = 5
         '
@@ -149,12 +152,9 @@ Partial Class Form1
         '
         Me.CartPanelForm.BackColor = System.Drawing.SystemColors.Control
         Me.CartPanelForm.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.CartPanelForm.Controls.Add(Me.Label4)
+        Me.CartPanelForm.Controls.Add(Me.Coupon1)
+        Me.CartPanelForm.Controls.Add(Me.Panel7)
         Me.CartPanelForm.Controls.Add(Me.CartLayoutPanel)
-        Me.CartPanelForm.Controls.Add(Me.viderBtn)
-        Me.CartPanelForm.Controls.Add(Me.sumLabel)
-        Me.CartPanelForm.Controls.Add(Me.Label3)
-        Me.CartPanelForm.Controls.Add(Me.validerBtn)
         Me.CartPanelForm.Controls.Add(Me.Label2)
         Me.CartPanelForm.Dock = System.Windows.Forms.DockStyle.Right
         Me.CartPanelForm.Location = New System.Drawing.Point(627, 0)
@@ -163,54 +163,76 @@ Partial Class Form1
         Me.CartPanelForm.Size = New System.Drawing.Size(171, 567)
         Me.CartPanelForm.TabIndex = 5
         '
-        'CartLayoutPanel
+        'Panel7
         '
-        Me.CartLayoutPanel.AutoScroll = True
-        Me.CartLayoutPanel.BackColor = System.Drawing.SystemColors.Window
-        Me.CartLayoutPanel.Location = New System.Drawing.Point(8, 20)
-        Me.CartLayoutPanel.Name = "CartLayoutPanel"
-        Me.CartLayoutPanel.Size = New System.Drawing.Size(151, 463)
-        Me.CartLayoutPanel.TabIndex = 6
+        Me.Panel7.Controls.Add(Me.Label4)
+        Me.Panel7.Controls.Add(Me.validerBtn)
+        Me.Panel7.Controls.Add(Me.viderBtn)
+        Me.Panel7.Controls.Add(Me.Label3)
+        Me.Panel7.Controls.Add(Me.sumLabel)
+        Me.Panel7.Location = New System.Drawing.Point(4, 296)
+        Me.Panel7.Name = "Panel7"
+        Me.Panel7.Size = New System.Drawing.Size(162, 66)
+        Me.Panel7.TabIndex = 6
+        '
+        'Label4
+        '
+        Me.Label4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(136, 12)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(13, 13)
+        Me.Label4.TabIndex = 7
+        Me.Label4.Text = "€"
+        '
+        'validerBtn
+        '
+        Me.validerBtn.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.validerBtn.Location = New System.Drawing.Point(81, 40)
+        Me.validerBtn.Name = "validerBtn"
+        Me.validerBtn.Size = New System.Drawing.Size(75, 23)
+        Me.validerBtn.TabIndex = 1
+        Me.validerBtn.Text = "Valider"
+        Me.validerBtn.UseVisualStyleBackColor = True
         '
         'viderBtn
         '
         Me.viderBtn.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.viderBtn.Location = New System.Drawing.Point(3, 537)
+        Me.viderBtn.Location = New System.Drawing.Point(3, 40)
         Me.viderBtn.Name = "viderBtn"
         Me.viderBtn.Size = New System.Drawing.Size(75, 23)
         Me.viderBtn.TabIndex = 5
         Me.viderBtn.Text = "Vider"
         Me.viderBtn.UseVisualStyleBackColor = True
         '
-        'sumLabel
-        '
-        Me.sumLabel.Anchor = System.Windows.Forms.AnchorStyles.Bottom
-        Me.sumLabel.AutoSize = True
-        Me.sumLabel.Location = New System.Drawing.Point(74, 509)
-        Me.sumLabel.Name = "sumLabel"
-        Me.sumLabel.Size = New System.Drawing.Size(22, 13)
-        Me.sumLabel.TabIndex = 3
-        Me.sumLabel.Text = "0,0"
-        '
         'Label3
         '
         Me.Label3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(4, 509)
+        Me.Label3.Location = New System.Drawing.Point(26, 12)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(31, 13)
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "Total"
         '
-        'validerBtn
+        'sumLabel
         '
-        Me.validerBtn.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.validerBtn.Location = New System.Drawing.Point(84, 537)
-        Me.validerBtn.Name = "validerBtn"
-        Me.validerBtn.Size = New System.Drawing.Size(75, 23)
-        Me.validerBtn.TabIndex = 1
-        Me.validerBtn.Text = "Valider"
-        Me.validerBtn.UseVisualStyleBackColor = True
+        Me.sumLabel.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.sumLabel.AutoSize = True
+        Me.sumLabel.Location = New System.Drawing.Point(97, 12)
+        Me.sumLabel.Name = "sumLabel"
+        Me.sumLabel.Size = New System.Drawing.Size(13, 13)
+        Me.sumLabel.TabIndex = 3
+        Me.sumLabel.Text = "0"
+        '
+        'CartLayoutPanel
+        '
+        Me.CartLayoutPanel.AutoScroll = True
+        Me.CartLayoutPanel.BackColor = System.Drawing.SystemColors.Window
+        Me.CartLayoutPanel.Location = New System.Drawing.Point(8, 20)
+        Me.CartLayoutPanel.Name = "CartLayoutPanel"
+        Me.CartLayoutPanel.Size = New System.Drawing.Size(151, 270)
+        Me.CartLayoutPanel.TabIndex = 6
         '
         'Label2
         '
@@ -311,15 +333,12 @@ Partial Class Form1
         Me.Panel6.Size = New System.Drawing.Size(798, 567)
         Me.Panel6.TabIndex = 7
         '
-        'Label4
+        'Coupon1
         '
-        Me.Label4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(119, 509)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(13, 13)
-        Me.Label4.TabIndex = 7
-        Me.Label4.Text = "€"
+        Me.Coupon1.Location = New System.Drawing.Point(9, 378)
+        Me.Coupon1.Name = "Coupon1"
+        Me.Coupon1.Size = New System.Drawing.Size(150, 93)
+        Me.Coupon1.TabIndex = 6
         '
         'Form1
         '
@@ -334,6 +353,8 @@ Partial Class Form1
         Me.Text = "Form1"
         Me.CartPanelForm.ResumeLayout(False)
         Me.CartPanelForm.PerformLayout()
+        Me.Panel7.ResumeLayout(False)
+        Me.Panel7.PerformLayout()
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
         Me.Panel5.ResumeLayout(False)
@@ -363,4 +384,6 @@ Partial Class Form1
     Friend WithEvents ListButton As Button
     Friend WithEvents CartLayoutPanel As System.Windows.Forms.FlowLayoutPanel
     Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents Panel7 As System.Windows.Forms.Panel
+    Friend WithEvents Coupon1 As PrototypeGSI.Coupon
 End Class

@@ -82,6 +82,12 @@
     <Compile Include="controls\CartElem.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="controls\Coupon.Designer.vb">
+      <DependentUpon>Coupon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="controls\Coupon.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="controls\PizzaGridView.Designer.vb">
       <DependentUpon>PizzaGridView.vb</DependentUpon>
     </Compile>
@@ -126,6 +132,9 @@
   <ItemGroup>
     <EmbeddedResource Include="controls\CartElem.resx">
       <DependentUpon>CartElem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="controls\Coupon.resx">
+      <DependentUpon>Coupon.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="controls\PizzaGridView.resx">
       <DependentUpon>PizzaGridView.vb</DependentUpon>

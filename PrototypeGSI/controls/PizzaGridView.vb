@@ -19,12 +19,10 @@
     Private Sub addToCart_Click(sender As Object, e As EventArgs) Handles addToCart.Click
         Select Case _pizza.InOrOut()
             Case True
-                Form1.AddToCart(_pizza)
+                Form1.UpdateCart(_pizza)
             Case False
                 Form1.AddToCartNewPizza(_pizza)
 
         End Select
-
-
     End Sub
 End Class

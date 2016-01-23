@@ -10,11 +10,18 @@
     Dim myState As State
     Dim pizzasToShow As List(Of Pizza)
     Friend WithEvents PizzaLayoutPanel As Panel
+    Dim nbPizza As Integer
+    Dim reduc As Integer
+
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
         CreatePizzaLayoutPanel()
         myFilters = New Filters(Me)
         myState = State.GRID
+        Coupon1.SetTextCoupon("Pour 2 pizzas achetées la 3ème offerte !")
+        Coupon1.SetTextBlink("Ajouter une pizza au panier et elle vous sera offerte !")
+        nbPizza = 0
+        reduc = 0
     End Sub
 
     Private Sub treeView_DrawNode(sender As Object, e As DrawTreeNodeEventArgs) Handles TreeView1.DrawNode
@@ -67,19 +74,21 @@
 
     Public Sub AddToCartNewPizza(pizza As Pizza)
         CartLayoutPanel.Controls.Add(New CartElem(pizza))
-        UpdateTotal(pizza.Price)
+        UpdateTotal()
+
     End Sub
 
-    Public Sub AddToCart(pizza As Pizza)
-        UpdateTotal(pizza.Price)
-
+    Public Sub UpdateCart(pizza As Pizza)
+        'Update the panel
         For Each elem In CartLayoutPanel.Controls
             Dim e As CartElem = DirectCast(elem, CartElem)
             If e.ContainsPizza(pizza) Then
-                e.UpdatePizza(pizza)
+                e.UpdatePizzaView(pizza)
             End If
-
         Next
+
+        UpdateTotal()
+
     End Sub
 
     Private Sub viderBtn_Click(sender As Object, e As EventArgs) Handles viderBtn.Click
@@ -88,23 +97,40 @@
             elem.GetPizza().Delete()
         Next
         CartLayoutPanel.Controls.Clear()
-        ResetTotal()
 
+        ResetReduc(0)
+        nbPizza = 0
+        UpdateTotal()
+        Coupon1.Reset()
     End Sub
 
     Private Sub validerBtn_Click(sender As Object, e As EventArgs) Handles validerBtn.Click
-        CartLayoutPanel.Controls.Clear()
-        ResetTotal()
+
     End Sub
 
-    Public Sub UpdateTotal(Total As Double)
-        sumLabel.Text += Total
+    Public Sub UpdateTotal()
+        Dim total As Double = 0
+        For Each control In CartLayoutPanel.Controls
+            Dim elem As CartElem = DirectCast(control, CartElem)
+            total += elem.GetPizza().Price * elem.GetPizza().Number
+        Next
+        sumLabel.Text = total - reduc
+
     End Sub
 
+    Public Sub UpdateNbPizza(Nb As Integer)
+        nbPizza += Nb
+    End Sub
     Public Sub ResetTotal()
         sumLabel.Text = 0.0
     End Sub
 
+    Public Sub SetReduc(Nb As Integer)
+        reduc += Nb
+    End Sub
+    Public Sub ResetReduc(Nb As Integer)
+        reduc = Nb
+    End Sub
     Private Sub GridButton_CLick(sender As Object, e As EventArgs) Handles GridButton.Click
         myState = State.GRID
         CreatePizzaLayoutPanel()
@@ -139,4 +165,11 @@
         Refresh()
     End Sub
 
+    Public Sub UpdateCouponAdd(Pizza As Pizza)
+        Coupon1.UpdateCouponAdd(nbPizza, Pizza)
+    End Sub
+
+    Public Sub UpdateCouponSuppr(Pizza As Pizza)
+        Coupon1.UpdateCouponSuppr(nbPizza, Pizza)
+    End Sub
 End Class

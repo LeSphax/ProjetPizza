@@ -70,7 +70,6 @@ Partial Class CartElem
         Me.pizzaQte.Name = "pizzaQte"
         Me.pizzaQte.Size = New System.Drawing.Size(48, 20)
         Me.pizzaQte.TabIndex = 3
-        Me.pizzaQte.Value = New Decimal(New Integer() {1, 0, 0, 0})
         '
         'Panel1
         '
