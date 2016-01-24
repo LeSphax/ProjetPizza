@@ -10,7 +10,6 @@
     Dim myState As State
     Dim pizzasToShow As List(Of Pizza)
     Friend WithEvents PizzaLayoutPanel As Panel
-    Dim nbPizza As Integer
     Dim reduc As Integer
 
 
@@ -20,7 +19,6 @@
         myState = State.GRID
         Coupon1.SetTextCoupon("Pour 2 pizzas achetées la 3ème offerte !")
         Coupon1.SetTextBlink("Ajouter une pizza au panier et elle vous sera offerte !")
-        nbPizza = 0
         reduc = 0
     End Sub
 
@@ -97,15 +95,13 @@
             elem.GetPizza().Delete()
         Next
         CartLayoutPanel.Controls.Clear()
-
         ResetReduc(0)
-        nbPizza = 0
         UpdateTotal()
-        Coupon1.Reset()
+        Coupon1.UpdateCouponEmptyCart()
     End Sub
 
     Private Sub validerBtn_Click(sender As Object, e As EventArgs) Handles validerBtn.Click
-
+        'Not implemented yet
     End Sub
 
     Public Sub UpdateTotal()
@@ -118,9 +114,6 @@
 
     End Sub
 
-    Public Sub UpdateNbPizza(Nb As Integer)
-        nbPizza += Nb
-    End Sub
     Public Sub ResetTotal()
         sumLabel.Text = 0.0
     End Sub
@@ -163,13 +156,5 @@
         PizzaLayoutPanel.Name = "PizzaLayoutPanel"
         Me.PizzaLayoutPanel.Size = New System.Drawing.Size(837, 606)
         Refresh()
-    End Sub
-
-    Public Sub UpdateCouponAdd(Pizza As Pizza)
-        Coupon1.UpdateCouponAdd(nbPizza, Pizza)
-    End Sub
-
-    Public Sub UpdateCouponSuppr(Pizza As Pizza)
-        Coupon1.UpdateCouponSuppr(nbPizza, Pizza)
     End Sub
 End Class

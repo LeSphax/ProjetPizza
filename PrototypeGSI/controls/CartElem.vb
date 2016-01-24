@@ -25,8 +25,7 @@
 
 
     Private Sub deleteBtn_Click(sender As Object, e As EventArgs) Handles deleteBtn.Click
-        Form1.UpdateNbPizza(-_pizza.Number)
-        Form1.UpdateCouponSuppr(_pizza)
+        Form1.Coupon1.UpdateCouponDeletePizzas(_pizza)
         _pizza.Delete()
         Parent = Nothing
         Form1.UpdateTotal()
@@ -37,12 +36,10 @@
     Private Sub pizzaQte_ValueChanged(sender As Object, e As EventArgs) Handles pizzaQte.ValueChanged
         If pizzaQte.Value < initialValue Then
             'down was pressed
-            Form1.UpdateNbPizza(-1)
-            Form1.UpdateCouponSuppr(_pizza)
+            Form1.Coupon1.UpdateCouponRemoveOnePizza()
         ElseIf pizzaQte.Value > initialValue Then
             'Up was pressed
-            Form1.UpdateNbPizza(1)
-            Form1.UpdateCouponAdd(_pizza)
+            Form1.Coupon1.UpdateCouponAdd(_pizza)
         End If
         initialValue = pizzaQte.Value
         _pizza.Number = pizzaQte.Value
