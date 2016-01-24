@@ -47,12 +47,13 @@ Partial Class Form1
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.TreeView1 = New System.Windows.Forms.TreeView()
         Me.CartPanelForm = New System.Windows.Forms.Panel()
+        Me.Coupon1 = New PrototypeGSI.Coupon()
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.validerBtn = New System.Windows.Forms.Button()
         Me.viderBtn = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.sumLabel = New System.Windows.Forms.Label()
+        Me.LabelTotal = New System.Windows.Forms.Label()
         Me.CartLayoutPanel = New System.Windows.Forms.FlowLayoutPanel()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel4 = New System.Windows.Forms.Panel()
@@ -63,7 +64,9 @@ Partial Class Form1
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel6 = New System.Windows.Forms.Panel()
-        Me.Coupon1 = New PrototypeGSI.Coupon()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.LabelReduc = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
         Me.CartPanelForm.SuspendLayout()
         Me.Panel7.SuspendLayout()
         Me.Panel4.SuspendLayout()
@@ -163,23 +166,33 @@ Partial Class Form1
         Me.CartPanelForm.Size = New System.Drawing.Size(171, 567)
         Me.CartPanelForm.TabIndex = 5
         '
+        'Coupon1
+        '
+        Me.Coupon1.Location = New System.Drawing.Point(9, 424)
+        Me.Coupon1.Name = "Coupon1"
+        Me.Coupon1.Size = New System.Drawing.Size(150, 93)
+        Me.Coupon1.TabIndex = 6
+        '
         'Panel7
         '
+        Me.Panel7.Controls.Add(Me.Label7)
+        Me.Panel7.Controls.Add(Me.LabelReduc)
+        Me.Panel7.Controls.Add(Me.Label5)
         Me.Panel7.Controls.Add(Me.Label4)
         Me.Panel7.Controls.Add(Me.validerBtn)
         Me.Panel7.Controls.Add(Me.viderBtn)
         Me.Panel7.Controls.Add(Me.Label3)
-        Me.Panel7.Controls.Add(Me.sumLabel)
-        Me.Panel7.Location = New System.Drawing.Point(4, 296)
+        Me.Panel7.Controls.Add(Me.LabelTotal)
+        Me.Panel7.Location = New System.Drawing.Point(4, 321)
         Me.Panel7.Name = "Panel7"
-        Me.Panel7.Size = New System.Drawing.Size(162, 66)
+        Me.Panel7.Size = New System.Drawing.Size(162, 97)
         Me.Panel7.TabIndex = 6
         '
         'Label4
         '
         Me.Label4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(136, 12)
+        Me.Label4.Location = New System.Drawing.Point(136, 43)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(13, 13)
         Me.Label4.TabIndex = 7
@@ -188,7 +201,7 @@ Partial Class Form1
         'validerBtn
         '
         Me.validerBtn.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.validerBtn.Location = New System.Drawing.Point(81, 40)
+        Me.validerBtn.Location = New System.Drawing.Point(81, 71)
         Me.validerBtn.Name = "validerBtn"
         Me.validerBtn.Size = New System.Drawing.Size(75, 23)
         Me.validerBtn.TabIndex = 1
@@ -198,7 +211,7 @@ Partial Class Form1
         'viderBtn
         '
         Me.viderBtn.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.viderBtn.Location = New System.Drawing.Point(3, 40)
+        Me.viderBtn.Location = New System.Drawing.Point(3, 71)
         Me.viderBtn.Name = "viderBtn"
         Me.viderBtn.Size = New System.Drawing.Size(75, 23)
         Me.viderBtn.TabIndex = 5
@@ -209,21 +222,21 @@ Partial Class Form1
         '
         Me.Label3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(26, 12)
+        Me.Label3.Location = New System.Drawing.Point(13, 43)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(31, 13)
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "Total"
         '
-        'sumLabel
+        'LabelTotal
         '
-        Me.sumLabel.Anchor = System.Windows.Forms.AnchorStyles.Bottom
-        Me.sumLabel.AutoSize = True
-        Me.sumLabel.Location = New System.Drawing.Point(97, 12)
-        Me.sumLabel.Name = "sumLabel"
-        Me.sumLabel.Size = New System.Drawing.Size(13, 13)
-        Me.sumLabel.TabIndex = 3
-        Me.sumLabel.Text = "0"
+        Me.LabelTotal.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.LabelTotal.AutoSize = True
+        Me.LabelTotal.Location = New System.Drawing.Point(97, 43)
+        Me.LabelTotal.Name = "LabelTotal"
+        Me.LabelTotal.Size = New System.Drawing.Size(13, 13)
+        Me.LabelTotal.TabIndex = 3
+        Me.LabelTotal.Text = "0"
         '
         'CartLayoutPanel
         '
@@ -231,7 +244,7 @@ Partial Class Form1
         Me.CartLayoutPanel.BackColor = System.Drawing.SystemColors.Window
         Me.CartLayoutPanel.Location = New System.Drawing.Point(8, 20)
         Me.CartLayoutPanel.Name = "CartLayoutPanel"
-        Me.CartLayoutPanel.Size = New System.Drawing.Size(151, 270)
+        Me.CartLayoutPanel.Size = New System.Drawing.Size(151, 295)
         Me.CartLayoutPanel.TabIndex = 6
         '
         'Label2
@@ -333,12 +346,32 @@ Partial Class Form1
         Me.Panel6.Size = New System.Drawing.Size(798, 567)
         Me.Panel6.TabIndex = 7
         '
-        'Coupon1
+        'Label5
         '
-        Me.Coupon1.Location = New System.Drawing.Point(9, 378)
-        Me.Coupon1.Name = "Coupon1"
-        Me.Coupon1.Size = New System.Drawing.Size(150, 93)
-        Me.Coupon1.TabIndex = 6
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(13, 4)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(56, 13)
+        Me.Label5.TabIndex = 8
+        Me.Label5.Text = "Réduction"
+        '
+        'LabelReduc
+        '
+        Me.LabelReduc.AutoSize = True
+        Me.LabelReduc.Location = New System.Drawing.Point(97, 4)
+        Me.LabelReduc.Name = "LabelReduc"
+        Me.LabelReduc.Size = New System.Drawing.Size(13, 13)
+        Me.LabelReduc.TabIndex = 9
+        Me.LabelReduc.Text = "0"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(136, 4)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(13, 13)
+        Me.Label7.TabIndex = 10
+        Me.Label7.Text = "€"
         '
         'Form1
         '
@@ -374,7 +407,7 @@ Partial Class Form1
     Friend WithEvents Panel3 As Panel
     Friend WithEvents Panel6 As Panel
     Friend WithEvents FilterPanel As FlowLayoutPanel
-    Friend WithEvents sumLabel As System.Windows.Forms.Label
+    Friend WithEvents LabelTotal As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents validerBtn As System.Windows.Forms.Button
     Friend WithEvents Label2 As System.Windows.Forms.Label
@@ -386,4 +419,7 @@ Partial Class Form1
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Panel7 As System.Windows.Forms.Panel
     Friend WithEvents Coupon1 As PrototypeGSI.Coupon
+    Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents LabelReduc As System.Windows.Forms.Label
+    Friend WithEvents Label5 As System.Windows.Forms.Label
 End Class

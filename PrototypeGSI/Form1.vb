@@ -10,7 +10,7 @@
     Dim myState As State
     Dim pizzasToShow As List(Of Pizza)
     Friend WithEvents PizzaLayoutPanel As Panel
-    Dim reduc As Integer
+    Dim reduc As Double
 
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
@@ -110,19 +110,21 @@
             Dim elem As CartElem = DirectCast(control, CartElem)
             total += elem.GetPizza().Price * elem.GetPizza().Number
         Next
-        sumLabel.Text = total - reduc
+        UpdateLabelTotal(total - reduc)
 
     End Sub
 
     Public Sub ResetTotal()
-        sumLabel.Text = 0.0
+        LabelTotal.Text = 0.0
     End Sub
 
-    Public Sub SetReduc(Nb As Integer)
+    Public Sub SetReduc(Nb As Double)
         reduc += Nb
+        UpdateLabelReduc(reduc)
     End Sub
-    Public Sub ResetReduc(Nb As Integer)
+    Public Sub ResetReduc(Nb As Double)
         reduc = Nb
+        UpdateLabelReduc(reduc)
     End Sub
     Private Sub GridButton_CLick(sender As Object, e As EventArgs) Handles GridButton.Click
         myState = State.GRID
@@ -156,5 +158,13 @@
         PizzaLayoutPanel.Name = "PizzaLayoutPanel"
         Me.PizzaLayoutPanel.Size = New System.Drawing.Size(837, 606)
         Refresh()
+    End Sub
+
+    Private Sub UpdateLabelReduc(Reduc As Double)
+        LabelReduc.Text = Reduc
+    End Sub
+
+    Private Sub UpdateLabelTotal(Total As Double)
+        LabelTotal.Text = Total
     End Sub
 End Class
