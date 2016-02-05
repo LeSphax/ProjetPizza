@@ -36,7 +36,7 @@
     Private Sub pizzaQte_ValueChanged(sender As Object, e As EventArgs) Handles pizzaQte.ValueChanged
         If pizzaQte.Value < initialValue Then
             'down was pressed
-            Form1.Coupon1.UpdateCouponRemoveOnePizza()
+            Form1.Coupon1.UpdateCouponDeleteOnePizza()
         ElseIf pizzaQte.Value > initialValue Then
             'Up was pressed
             Form1.Coupon1.UpdateCouponAdd(_pizza)

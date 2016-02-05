@@ -17,9 +17,8 @@
         CreatePizzaLayoutPanel()
         myFilters = New Filters(Me)
         myState = State.GRID
-        Coupon1.SetTextCoupon("Pour 2 pizzas achetées la 3ème offerte !")
-        Coupon1.SetTextBlink("Ajouter une pizza au panier et elle vous sera offerte !")
         reduc = 0
+        Coupon1.AddCoupon(New Coupon("Pour trois pizzas achetées 5€ offert", "Plus qu'une pizza pour avoir la réduction"))
     End Sub
 
     Private Sub treeView_DrawNode(sender As Object, e As DrawTreeNodeEventArgs) Handles TreeView1.DrawNode
