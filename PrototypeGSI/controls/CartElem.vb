@@ -11,8 +11,8 @@
 
     Public Sub UpdatePizzaView(Pizza As Pizza)
         pizzaNameLabel.Text = Pizza.Name
-        pizzaPriceLabel.Text = Pizza.Price * Pizza.Number
-        pizzaQte.Text = Pizza.Number
+        LabelPizzaPrice.Text = Pizza.Price * Pizza.Number
+        PizzaQte.Text = Pizza.Number
     End Sub
 
     Public Function GetPizza() As Pizza
@@ -24,7 +24,7 @@
     End Function
 
 
-    Private Sub deleteBtn_Click(sender As Object, e As EventArgs) Handles deleteBtn.Click
+    Private Sub deleteBtn_Click(sender As Object, e As EventArgs) Handles DeleteBtn.Click
         Form1.Coupon1.UpdateCouponDeletePizzas(_pizza)
         _pizza.Delete()
         Parent = Nothing
@@ -33,16 +33,16 @@
     End Sub
 
 
-    Private Sub pizzaQte_ValueChanged(sender As Object, e As EventArgs) Handles pizzaQte.ValueChanged
-        If pizzaQte.Value < initialValue Then
+    Private Sub pizzaQte_ValueChanged(sender As Object, e As EventArgs) Handles PizzaQte.ValueChanged
+        If PizzaQte.Value < initialValue Then
             'down was pressed
             Form1.Coupon1.UpdateCouponDeleteOnePizza()
-        ElseIf pizzaQte.Value > initialValue Then
+        ElseIf PizzaQte.Value > initialValue Then
             'Up was pressed
             Form1.Coupon1.UpdateCouponAdd(_pizza)
         End If
-        initialValue = pizzaQte.Value
-        _pizza.Number = pizzaQte.Value
+        initialValue = PizzaQte.Value
+        _pizza.Number = PizzaQte.Value
         UpdatePizzaView(_pizza)
         Form1.UpdateTotal()
 

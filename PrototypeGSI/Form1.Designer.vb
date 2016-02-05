@@ -155,8 +155,8 @@ Partial Class Form1
         '
         Me.CartPanelForm.BackColor = System.Drawing.SystemColors.Control
         Me.CartPanelForm.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.CartPanelForm.Controls.Add(Me.Coupon1)
         Me.CartPanelForm.Controls.Add(Me.Panel7)
+        Me.CartPanelForm.Controls.Add(Me.Coupon1)
         Me.CartPanelForm.Controls.Add(Me.CartLayoutPanel)
         Me.CartPanelForm.Controls.Add(Me.Label2)
         Me.CartPanelForm.Dock = System.Windows.Forms.DockStyle.Right
@@ -176,9 +176,10 @@ Partial Class Form1
         Me.Panel7.Controls.Add(Me.viderBtn)
         Me.Panel7.Controls.Add(Me.Label3)
         Me.Panel7.Controls.Add(Me.LabelTotal)
-        Me.Panel7.Location = New System.Drawing.Point(4, 321)
+        Me.Panel7.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Panel7.Location = New System.Drawing.Point(0, 382)
         Me.Panel7.Name = "Panel7"
-        Me.Panel7.Size = New System.Drawing.Size(162, 70)
+        Me.Panel7.Size = New System.Drawing.Size(169, 70)
         Me.Panel7.TabIndex = 6
         '
         'Label7
@@ -221,7 +222,7 @@ Partial Class Form1
         'validerBtn
         '
         Me.validerBtn.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.validerBtn.Location = New System.Drawing.Point(81, 42)
+        Me.validerBtn.Location = New System.Drawing.Point(88, 42)
         Me.validerBtn.Name = "validerBtn"
         Me.validerBtn.Size = New System.Drawing.Size(75, 23)
         Me.validerBtn.TabIndex = 1
@@ -242,7 +243,7 @@ Partial Class Form1
         '
         Me.Label3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(16, 21)
+        Me.Label3.Location = New System.Drawing.Point(13, 21)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(31, 13)
         Me.Label3.TabIndex = 2
@@ -252,7 +253,7 @@ Partial Class Form1
         '
         Me.LabelTotal.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.LabelTotal.AutoSize = True
-        Me.LabelTotal.Location = New System.Drawing.Point(97, 20)
+        Me.LabelTotal.Location = New System.Drawing.Point(97, 17)
         Me.LabelTotal.Name = "LabelTotal"
         Me.LabelTotal.Size = New System.Drawing.Size(13, 13)
         Me.LabelTotal.TabIndex = 3
@@ -264,16 +265,16 @@ Partial Class Form1
         Me.CartLayoutPanel.BackColor = System.Drawing.SystemColors.Window
         Me.CartLayoutPanel.Location = New System.Drawing.Point(3, 20)
         Me.CartLayoutPanel.Name = "CartLayoutPanel"
-        Me.CartLayoutPanel.Size = New System.Drawing.Size(163, 295)
+        Me.CartLayoutPanel.Size = New System.Drawing.Size(157, 356)
         Me.CartLayoutPanel.TabIndex = 6
         '
         'Label2
         '
-        Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(61, 1)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(4, 1)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(77, 13)
+        Me.Label2.Size = New System.Drawing.Size(100, 17)
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "Ma commande"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -368,9 +369,10 @@ Partial Class Form1
         '
         'Coupon1
         '
-        Me.Coupon1.Location = New System.Drawing.Point(4, 397)
+        Me.Coupon1.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Coupon1.Location = New System.Drawing.Point(0, 452)
         Me.Coupon1.Name = "Coupon1"
-        Me.Coupon1.Size = New System.Drawing.Size(156, 132)
+        Me.Coupon1.Size = New System.Drawing.Size(169, 113)
         Me.Coupon1.TabIndex = 6
         '
         'Form1
@@ -383,7 +385,7 @@ Partial Class Form1
         Me.Controls.Add(Me.Panel1)
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "Form1"
-        Me.Text = "Form1"
+        Me.Text = "Commande de pizzas"
         Me.CartPanelForm.ResumeLayout(False)
         Me.CartPanelForm.PerformLayout()
         Me.Panel7.ResumeLayout(False)
