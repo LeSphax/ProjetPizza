@@ -39,10 +39,11 @@
         NbPizza += 1
         Select Case CouponState
             Case State.INACTIVE
-                If NbPizza Mod 3 = 1 Then
+                If NbPizza < 2 Then
                     CouponState = State.INACTIVE
                 End If
-                If NbPizza Mod 3 = 2 Then
+                If NbPizza >= 2 Then
+                    ShowLabelBlink()
                     Blink()
                     CouponState = State.BLINKING
                 End If
@@ -56,7 +57,11 @@
                 Init()
 
             Case State.ACTIVE
-                CouponState = State.INACTIVE
+                If NbPizza Mod 3 = 2 Then
+                    ShowLabelBlink()
+                    Blink()
+                    CouponState = State.BLINKING
+                End If
                 Init()
         End Select
     End Sub
@@ -65,29 +70,31 @@
         NbPizza -= 1
         Select Case CouponState
             Case State.INACTIVE
-                If NbPizza Mod 3 = 2 Then
-                    ShowLabelBlink()
-                    Blink()
-                    NbCoupons -= 1
-                    ChangeLabelCouponText(NbCoupons)
-                    Form1.ResetReduc(5 * NbCoupons)
-                    CouponState = State.BLINKING
-                End If
-                Init()
             Case State.BLINKING
-                If NbPizza Mod 3 = 2 Then
+                If NbPizza < 2 Then
                     StopBlinking()
                     CouponState = State.INACTIVE
                 End If
+                If NbPizza >= 2 And NbPizza Mod 3 = 0 Then
+                    StopBlinking()
+                    CouponState = State.ACTIVE
+                End If
                 Init()
-
             Case State.ACTIVE
-                ShowLabelBlink()
-                Blink()
-                NbCoupons -= 1
-                ChangeLabelCouponText(NbCoupons)
-                Form1.ResetReduc(5 * NbCoupons)
-                CouponState = State.BLINKING
+                If NbPizza < 2 Then
+                    NbCoupons = 0
+                    ChangeLabelCouponText(NbCoupons)
+                    Form1.ResetReduc(0)
+                    CouponState = State.INACTIVE
+                End If
+                If NbPizza >= 2 And NbPizza Mod 3 = 2 Then
+                    NbCoupons -= 1
+                    ChangeLabelCouponText(NbCoupons)
+                    Form1.ResetReduc(5 * NbCoupons)
+                    ShowLabelBlink()
+                    Blink()
+                    CouponState = State.BLINKING
+                End If
                 Init()
 
         End Select
@@ -97,36 +104,39 @@
         NbPizza -= Pizza.Number
         Select Case CouponState
             Case State.INACTIVE
-                ShowLabelBlink()
-                Blink()
-                NbCoupons = Int(NbPizza / 3)
-                ChangeLabelCouponText(NbCoupons)
-                Form1.ResetReduc(5 * NbCoupons)
-                CouponState = State.BLINKING
-                Init()
             Case State.BLINKING
-                If NbPizza Mod 3 = 2 Then
+                If NbPizza < 2 Then
                     StopBlinking()
                     CouponState = State.INACTIVE
+                End If
+                If NbPizza >= 2 Then
+                    StopBlinking()
+                    CouponState = State.ACTIVE
                 End If
                 Init()
 
             Case State.ACTIVE
-                If NbPizza Mod 3 = 2 Then
+               If NbPizza < 2 Then
+                    NbCoupons = 0
+                    ChangeLabelCouponText(NbCoupons)
+                    Form1.ResetReduc(0)
+                    CouponState = State.INACTIVE
+
+                ElseIf NbPizza >= 2 And NbPizza Mod 3 = 2 Then
                     ShowLabelBlink()
                     Blink()
                     NbCoupons = Int(NbPizza / 3)
                     ChangeLabelCouponText(NbCoupons)
                     Form1.ResetReduc(5 * NbCoupons)
                     CouponState = State.BLINKING
-                End If
-                If NbPizza Mod 3 = 0 Or NbPizza Mod 3 = 1 Then
-                    StopBlinking()
+
+                Else
                     NbCoupons = Int(NbPizza / 3)
                     ChangeLabelCouponText(NbCoupons)
                     Form1.ResetReduc(5 * NbCoupons)
-                    CouponState = State.INACTIVE
+                    CouponState = State.ACTIVE
                 End If
+
                 Init()
 
         End Select
@@ -136,13 +146,11 @@
         NbPizza = 0
         Select Case CouponState
             Case State.INACTIVE
+            Case State.BLINKING
+                StopBlinking()
                 NbCoupons = 0
                 ChangeLabelCouponText(NbCoupons)
                 Form1.ResetReduc(0)
-                CouponState = State.INACTIVE
-                Init()
-            Case State.BLINKING
-                StopBlinking()
                 CouponState = State.INACTIVE
                 Init()
             Case State.ACTIVE

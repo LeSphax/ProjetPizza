@@ -68,6 +68,7 @@ Partial Class CartElem
         '
         Me.PizzaQte.Location = New System.Drawing.Point(3, 16)
         Me.PizzaQte.Name = "PizzaQte"
+        Me.PizzaQte.ReadOnly = True
         Me.PizzaQte.Size = New System.Drawing.Size(48, 20)
         Me.PizzaQte.TabIndex = 3
         '
