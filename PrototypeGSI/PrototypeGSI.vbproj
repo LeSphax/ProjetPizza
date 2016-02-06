@@ -73,6 +73,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="classes\Coupon.vb" />
     <Compile Include="classes\Database.vb" />
     <Compile Include="classes\Filters.vb" />
     <Compile Include="classes\Pizza.vb" />
@@ -82,10 +83,10 @@
     <Compile Include="controls\CartElem.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="controls\Coupon.Designer.vb">
-      <DependentUpon>Coupon.vb</DependentUpon>
+    <Compile Include="controls\CouponView.Designer.vb">
+      <DependentUpon>CouponView.vb</DependentUpon>
     </Compile>
-    <Compile Include="controls\Coupon.vb">
+    <Compile Include="controls\CouponView.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="controls\PizzaGridView.Designer.vb">
@@ -133,8 +134,8 @@
     <EmbeddedResource Include="controls\CartElem.resx">
       <DependentUpon>CartElem.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="controls\Coupon.resx">
-      <DependentUpon>Coupon.vb</DependentUpon>
+    <EmbeddedResource Include="controls\CouponView.resx">
+      <DependentUpon>CouponView.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="controls\PizzaGridView.resx">
       <DependentUpon>PizzaGridView.vb</DependentUpon>
