@@ -80,10 +80,9 @@ Partial Class Form1
         '
         Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(53, 2)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label1.Location = New System.Drawing.Point(71, 2)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(37, 13)
+        Me.Label1.Size = New System.Drawing.Size(49, 17)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Pizzas"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -93,17 +92,17 @@ Partial Class Form1
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(948, 55)
+        Me.Panel1.Size = New System.Drawing.Size(1264, 67)
         Me.Panel1.TabIndex = 2
         '
         'TreeView1
         '
         Me.TreeView1.BackColor = System.Drawing.SystemColors.ActiveBorder
         Me.TreeView1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TreeView1.Location = New System.Drawing.Point(0, 32)
-        Me.TreeView1.Margin = New System.Windows.Forms.Padding(2)
+        Me.TreeView1.Location = New System.Drawing.Point(0, 39)
+        Me.TreeView1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TreeView1.Name = "TreeView1"
         TreeNode1.Name = "Type1"
         TreeNode1.Text = "Les Meilleures"
@@ -148,7 +147,7 @@ Partial Class Form1
         TreeNode21.Name = "AutresNode"
         TreeNode21.Text = "Autres"
         Me.TreeView1.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode4, TreeNode8, TreeNode12, TreeNode17, TreeNode21})
-        Me.TreeView1.Size = New System.Drawing.Size(150, 535)
+        Me.TreeView1.Size = New System.Drawing.Size(200, 660)
         Me.TreeView1.TabIndex = 5
         '
         'CartPanelForm
@@ -160,10 +159,10 @@ Partial Class Form1
         Me.CartPanelForm.Controls.Add(Me.CartLayoutPanel)
         Me.CartPanelForm.Controls.Add(Me.Label2)
         Me.CartPanelForm.Dock = System.Windows.Forms.DockStyle.Right
-        Me.CartPanelForm.Location = New System.Drawing.Point(627, 0)
-        Me.CartPanelForm.Margin = New System.Windows.Forms.Padding(2)
+        Me.CartPanelForm.Location = New System.Drawing.Point(837, 0)
+        Me.CartPanelForm.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.CartPanelForm.Name = "CartPanelForm"
-        Me.CartPanelForm.Size = New System.Drawing.Size(171, 567)
+        Me.CartPanelForm.Size = New System.Drawing.Size(227, 699)
         Me.CartPanelForm.TabIndex = 5
         '
         'Panel7
@@ -177,35 +176,39 @@ Partial Class Form1
         Me.Panel7.Controls.Add(Me.Label3)
         Me.Panel7.Controls.Add(Me.LabelTotal)
         Me.Panel7.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel7.Location = New System.Drawing.Point(0, 382)
+        Me.Panel7.Location = New System.Drawing.Point(0, 472)
+        Me.Panel7.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Panel7.Name = "Panel7"
-        Me.Panel7.Size = New System.Drawing.Size(169, 70)
+        Me.Panel7.Size = New System.Drawing.Size(225, 86)
         Me.Panel7.TabIndex = 6
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(136, 4)
+        Me.Label7.Location = New System.Drawing.Point(181, 5)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(13, 13)
+        Me.Label7.Size = New System.Drawing.Size(16, 17)
         Me.Label7.TabIndex = 10
         Me.Label7.Text = "€"
         '
         'LabelReduc
         '
         Me.LabelReduc.AutoSize = True
-        Me.LabelReduc.Location = New System.Drawing.Point(97, 4)
+        Me.LabelReduc.Location = New System.Drawing.Point(129, 5)
+        Me.LabelReduc.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LabelReduc.Name = "LabelReduc"
-        Me.LabelReduc.Size = New System.Drawing.Size(13, 13)
+        Me.LabelReduc.Size = New System.Drawing.Size(16, 17)
         Me.LabelReduc.TabIndex = 9
         Me.LabelReduc.Text = "0"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(13, 4)
+        Me.Label5.Location = New System.Drawing.Point(17, 5)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(56, 13)
+        Me.Label5.Size = New System.Drawing.Size(72, 17)
         Me.Label5.TabIndex = 8
         Me.Label5.Text = "Réduction"
         '
@@ -213,18 +216,20 @@ Partial Class Form1
         '
         Me.Label4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(136, 21)
+        Me.Label4.Location = New System.Drawing.Point(181, 26)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(13, 13)
+        Me.Label4.Size = New System.Drawing.Size(16, 17)
         Me.Label4.TabIndex = 7
         Me.Label4.Text = "€"
         '
         'validerBtn
         '
         Me.validerBtn.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.validerBtn.Location = New System.Drawing.Point(88, 42)
+        Me.validerBtn.Location = New System.Drawing.Point(117, 52)
+        Me.validerBtn.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.validerBtn.Name = "validerBtn"
-        Me.validerBtn.Size = New System.Drawing.Size(75, 23)
+        Me.validerBtn.Size = New System.Drawing.Size(100, 28)
         Me.validerBtn.TabIndex = 1
         Me.validerBtn.Text = "Valider"
         Me.validerBtn.UseVisualStyleBackColor = True
@@ -232,9 +237,10 @@ Partial Class Form1
         'viderBtn
         '
         Me.viderBtn.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.viderBtn.Location = New System.Drawing.Point(3, 42)
+        Me.viderBtn.Location = New System.Drawing.Point(4, 52)
+        Me.viderBtn.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.viderBtn.Name = "viderBtn"
-        Me.viderBtn.Size = New System.Drawing.Size(75, 23)
+        Me.viderBtn.Size = New System.Drawing.Size(100, 28)
         Me.viderBtn.TabIndex = 5
         Me.viderBtn.Text = "Vider"
         Me.viderBtn.UseVisualStyleBackColor = True
@@ -243,9 +249,10 @@ Partial Class Form1
         '
         Me.Label3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(13, 21)
+        Me.Label3.Location = New System.Drawing.Point(17, 26)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(31, 13)
+        Me.Label3.Size = New System.Drawing.Size(40, 17)
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "Total"
         '
@@ -253,9 +260,10 @@ Partial Class Form1
         '
         Me.LabelTotal.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.LabelTotal.AutoSize = True
-        Me.LabelTotal.Location = New System.Drawing.Point(97, 17)
+        Me.LabelTotal.Location = New System.Drawing.Point(129, 21)
+        Me.LabelTotal.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LabelTotal.Name = "LabelTotal"
-        Me.LabelTotal.Size = New System.Drawing.Size(13, 13)
+        Me.LabelTotal.Size = New System.Drawing.Size(16, 17)
         Me.LabelTotal.TabIndex = 3
         Me.LabelTotal.Text = "0"
         '
@@ -263,18 +271,20 @@ Partial Class Form1
         '
         Me.CartLayoutPanel.AutoScroll = True
         Me.CartLayoutPanel.BackColor = System.Drawing.SystemColors.Window
-        Me.CartLayoutPanel.Location = New System.Drawing.Point(3, 20)
+        Me.CartLayoutPanel.Location = New System.Drawing.Point(4, 25)
+        Me.CartLayoutPanel.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.CartLayoutPanel.Name = "CartLayoutPanel"
-        Me.CartLayoutPanel.Size = New System.Drawing.Size(157, 356)
+        Me.CartLayoutPanel.Size = New System.Drawing.Size(209, 438)
         Me.CartLayoutPanel.TabIndex = 6
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(4, 1)
+        Me.Label2.Location = New System.Drawing.Point(5, 1)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(100, 17)
+        Me.Label2.Size = New System.Drawing.Size(119, 20)
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "Ma commande"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -286,9 +296,9 @@ Partial Class Form1
         Me.Panel4.Controls.Add(Me.Panel5)
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel4.Location = New System.Drawing.Point(0, 0)
-        Me.Panel4.Margin = New System.Windows.Forms.Padding(2)
+        Me.Panel4.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(627, 82)
+        Me.Panel4.Size = New System.Drawing.Size(837, 100)
         Me.Panel4.TabIndex = 4
         '
         'FilterPanel
@@ -297,9 +307,9 @@ Partial Class Form1
         Me.FilterPanel.AutoSize = True
         Me.FilterPanel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.FilterPanel.Location = New System.Drawing.Point(0, 0)
-        Me.FilterPanel.Margin = New System.Windows.Forms.Padding(2)
+        Me.FilterPanel.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.FilterPanel.Name = "FilterPanel"
-        Me.FilterPanel.Size = New System.Drawing.Size(475, 80)
+        Me.FilterPanel.Size = New System.Drawing.Size(635, 98)
         Me.FilterPanel.TabIndex = 0
         '
         'Panel5
@@ -307,20 +317,20 @@ Partial Class Form1
         Me.Panel5.Controls.Add(Me.ListButton)
         Me.Panel5.Controls.Add(Me.GridButton)
         Me.Panel5.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Panel5.Location = New System.Drawing.Point(475, 0)
-        Me.Panel5.Margin = New System.Windows.Forms.Padding(2)
+        Me.Panel5.Location = New System.Drawing.Point(635, 0)
+        Me.Panel5.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(150, 80)
+        Me.Panel5.Size = New System.Drawing.Size(200, 98)
         Me.Panel5.TabIndex = 0
         '
         'ListButton
         '
         Me.ListButton.BackgroundImage = Global.PrototypeGSI.My.Resources.Resources.ListIcon
         Me.ListButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.ListButton.Location = New System.Drawing.Point(82, 20)
-        Me.ListButton.Margin = New System.Windows.Forms.Padding(2)
+        Me.ListButton.Location = New System.Drawing.Point(109, 25)
+        Me.ListButton.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ListButton.Name = "ListButton"
-        Me.ListButton.Size = New System.Drawing.Size(38, 41)
+        Me.ListButton.Size = New System.Drawing.Size(51, 50)
         Me.ListButton.TabIndex = 1
         Me.ListButton.UseVisualStyleBackColor = True
         '
@@ -328,10 +338,10 @@ Partial Class Form1
         '
         Me.GridButton.BackgroundImage = Global.PrototypeGSI.My.Resources.Resources.GridIcon
         Me.GridButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.GridButton.Location = New System.Drawing.Point(24, 20)
-        Me.GridButton.Margin = New System.Windows.Forms.Padding(2)
+        Me.GridButton.Location = New System.Drawing.Point(32, 25)
+        Me.GridButton.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.GridButton.Name = "GridButton"
-        Me.GridButton.Size = New System.Drawing.Size(38, 41)
+        Me.GridButton.Size = New System.Drawing.Size(51, 50)
         Me.GridButton.TabIndex = 0
         Me.GridButton.UseVisualStyleBackColor = True
         '
@@ -340,10 +350,10 @@ Partial Class Form1
         Me.Panel2.Controls.Add(Me.TreeView1)
         Me.Panel2.Controls.Add(Me.Panel3)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Left
-        Me.Panel2.Location = New System.Drawing.Point(0, 55)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(2)
+        Me.Panel2.Location = New System.Drawing.Point(0, 67)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(150, 567)
+        Me.Panel2.Size = New System.Drawing.Size(200, 699)
         Me.Panel2.TabIndex = 2
         '
         'Panel3
@@ -351,9 +361,9 @@ Partial Class Form1
         Me.Panel3.Controls.Add(Me.Label1)
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel3.Location = New System.Drawing.Point(0, 0)
-        Me.Panel3.Margin = New System.Windows.Forms.Padding(2)
+        Me.Panel3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(150, 32)
+        Me.Panel3.Size = New System.Drawing.Size(200, 39)
         Me.Panel3.TabIndex = 6
         '
         'Panel6
@@ -361,31 +371,33 @@ Partial Class Form1
         Me.Panel6.Controls.Add(Me.Panel4)
         Me.Panel6.Controls.Add(Me.CartPanelForm)
         Me.Panel6.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel6.Location = New System.Drawing.Point(150, 55)
-        Me.Panel6.Margin = New System.Windows.Forms.Padding(2)
+        Me.Panel6.Location = New System.Drawing.Point(200, 67)
+        Me.Panel6.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(798, 567)
+        Me.Panel6.Size = New System.Drawing.Size(1064, 699)
         Me.Panel6.TabIndex = 7
         '
         'Coupon1
         '
         Me.Coupon1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Coupon1.Location = New System.Drawing.Point(0, 452)
+        Me.Coupon1.Location = New System.Drawing.Point(0, 558)
+        Me.Coupon1.Margin = New System.Windows.Forms.Padding(5)
         Me.Coupon1.Name = "Coupon1"
-        Me.Coupon1.Size = New System.Drawing.Size(169, 113)
+        Me.Coupon1.Size = New System.Drawing.Size(225, 139)
         Me.Coupon1.TabIndex = 6
         '
         'Form1
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(948, 622)
+        Me.ClientSize = New System.Drawing.Size(1264, 766)
         Me.Controls.Add(Me.Panel6)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
-        Me.Margin = New System.Windows.Forms.Padding(2)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "Form1"
         Me.Text = "Commande de pizzas"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.CartPanelForm.ResumeLayout(False)
         Me.CartPanelForm.PerformLayout()
         Me.Panel7.ResumeLayout(False)
