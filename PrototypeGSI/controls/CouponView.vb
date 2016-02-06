@@ -75,10 +75,10 @@
                     StopBlinking_Dialog()
                     CouponState = State.INACTIVE
                 End If
-                If NbPizza >= 2 And NbPizza Mod 3 = 0 Then
+                If NbPizza >= 2 Then
                     StopBlinking_Dialog()
                     CouponState = State.ACTIVE
-                End If
+                    End If
                 Init_Dialog()
             Case State.ACTIVE
                 If NbPizza < 2 Then
