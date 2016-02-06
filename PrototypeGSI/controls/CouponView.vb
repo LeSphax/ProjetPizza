@@ -75,7 +75,7 @@
                     StopBlinking()
                     CouponState = State.INACTIVE
                 End If
-                If NbPizza >= 2 And NbPizza Mod 3 = 0 Then
+                If NbPizza >= 2 Then
                     StopBlinking()
                     CouponState = State.ACTIVE
                 End If
