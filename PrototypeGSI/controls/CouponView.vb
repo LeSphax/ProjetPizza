@@ -6,6 +6,8 @@
         ACTIVE
     End Enum
 
+    Private Const Reduc As Double = 5.0
+
     Private CouponState As State
     Private NbPizza As Integer
     Private NbCoupons As Integer
@@ -52,7 +54,7 @@
                 StopBlinking_Dialog()
                 NbCoupons += 1
                 ChangeLabelCouponText_Presentation(NbCoupons)
-                Form1.IncrementReducBy_Dialog(5.0)
+                Form1.IncrementReducBy_Dialog(Reduc)
                 CouponState = State.ACTIVE
                 Init_Dialog()
 
@@ -90,7 +92,7 @@
                 If NbPizza >= 2 And NbPizza Mod 3 = 2 Then
                     NbCoupons -= 1
                     ChangeLabelCouponText_Presentation(NbCoupons)
-                    Form1.SetReduc_Dialog(5 * NbCoupons)
+                    Form1.SetReduc_Dialog(Reduc * NbCoupons)
                     ShowLabelBlink_Presentation()
                     Blink()
                     CouponState = State.BLINKING
@@ -127,13 +129,13 @@
                     Blink()
                     NbCoupons = Int(NbPizza / 3)
                     ChangeLabelCouponText_Presentation(NbCoupons)
-                    Form1.SetReduc_Dialog(5 * NbCoupons)
+                    Form1.SetReduc_Dialog(Reduc * NbCoupons)
                     CouponState = State.BLINKING
 
                 Else
                     NbCoupons = Int(NbPizza / 3)
                     ChangeLabelCouponText_Presentation(NbCoupons)
-                    Form1.SetReduc_Dialog(5 * NbCoupons)
+                    Form1.SetReduc_Dialog(Reduc * NbCoupons)
                     CouponState = State.ACTIVE
                 End If
 
